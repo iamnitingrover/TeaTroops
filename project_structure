@@ -1,0 +1,29 @@
+teatroops/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── about/
+│   │   └── page.tsx
+│   ├── shop/
+│   │   └── page.tsx
+│   ├── contact/
+│   │   └── page.tsx
+│   └── product/
+│       └── [slug]/
+│           └── page.tsx
+├── components/
+│   └── ui/
+│       ├── button.tsx
+│       └── card.tsx
+├── public/
+│   └── placeholder.svg
+├── styles/
+│   └── globals.css
+├── lib/
+│   └── utils.ts
+├── next.config.js
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+├── postcss.config.js
+└── README.md
