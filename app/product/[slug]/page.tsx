@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 
 const teas = [
@@ -18,10 +19,12 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid md:grid-cols-2 gap-8">
-        <img
+        <Image
           src={`/placeholder.svg?height=400&width=400&text=${tea.name}`}
           alt={tea.name}
           className="w-full h-auto rounded-lg"
+          width={400}
+          height={400}
         />
         <div>
           <h1 className="text-3xl font-bold mb-4">{tea.name}</h1>
