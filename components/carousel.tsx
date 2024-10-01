@@ -35,7 +35,7 @@ export function Carousel({ teas }: CarouselProps) {
   }
 
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-[calc(100vh-3.5rem)] overflow-hidden">
       {teas.map((tea, index) => (
         <Link
           key={tea.slug}
@@ -45,13 +45,13 @@ export function Carousel({ teas }: CarouselProps) {
           }`}
         >
           <Image
-            src={`/placeholder.svg?height=1080&width=1920&text=${tea.name}`}
+            src={`/images/${tea.slug}.jpg`}
             alt={tea.name}
             layout="fill"
             objectFit="cover"
             priority
           />
-          <div className="absolute bottom-8 left-8 text-white bg-black bg-opacity-50 p-4 rounded">
+          <div className="absolute bottom-8 left-8 text-white p-4 rounded">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-2">
               {tea.name}
             </h1>
