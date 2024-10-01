@@ -1,6 +1,5 @@
 import { Carousel } from "@/components/carousel"
 import { ScrollableTeaSection } from "@/components/scrollable-tea-section"
-import Link from "next/link"
 import Image from "next/image"
 
 const teas = [
@@ -39,7 +38,7 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-[#00ab67]">About Bloom & Brew</h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                At Bloom & Brew, we're passionate about bringing you the finest organic herbal flower teas. Our
+                At Bloom & Brew, we are passionate about bringing you the finest organic herbal flower teas. Our
                 carefully curated blends are sourced from sustainable farms and handcrafted to perfection. Experience
                 the beauty of nature in every sip.
               </p>
