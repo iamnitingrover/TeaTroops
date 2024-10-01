@@ -51,15 +51,13 @@ export function Carousel({ teas }: CarouselProps) {
             objectFit="cover"
             priority
           />
-          <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-            <div className="text-center text-white p-4">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-2">
-                {tea.name}
-              </h1>
-              <p className="max-w-[700px] text-xl md:text-2xl">
-                {tea.description}
-              </p>
-            </div>
+          <div className="absolute bottom-8 left-8 text-white p-4 rounded">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-2">
+              {tea.name}
+            </h1>
+            <p className="max-w-[700px] text-xl md:text-2xl">
+              {tea.description}
+            </p>
           </div>
         </Link>
       ))}

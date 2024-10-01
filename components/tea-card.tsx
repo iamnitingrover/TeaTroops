@@ -12,21 +12,17 @@ interface TeaCardProps {
 export function TeaCard({ name, description, price, slug }: TeaCardProps) {
   return (
     <Link href={`/product/${slug}`}>
-      <Card className="cursor-pointer transition-shadow hover:shadow-lg border-[#00ab67] border-opacity-20 h-full flex flex-col">
+      <Card className="h-full flex flex-col transition-shadow hover:shadow-lg border-[#00ab67] border-opacity-20">
         <CardHeader className="flex-grow">
           <CardTitle className="text-[#00ab67]">{name}</CardTitle>
           <CardDescription className="line-clamp-2">{description}</CardDescription>
         </CardHeader>
-        <CardContent className="pt-0">
+        <CardContent>
           <Image
             alt={name}
             className="w-full h-48 object-cover rounded-md mb-4"
             height={192}
-            src={`/placeholder.svg?height=192&width=256&text=${name}`}
-            style={{
-              aspectRatio: "4/3",
-              objectFit: "cover",
-            }}
+            src={`/images/${slug}.jpg`}
             width={256}
           />
           <p className="text-lg font-bold text-[#00ab67]">{price}</p>
