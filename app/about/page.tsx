@@ -60,7 +60,7 @@ export default function AboutUs() {
           <div className="container px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-4">Join Our Journey</h2>
             <p className="max-w-[600px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              At Bloom & Brew, we&apos;re more than just a tea company. We&apos;re a community of tea lovers, wellness enthusiasts, and environmental advocates. Join us in our mission to bring the finest organic herbal teas to your cup while making a positive impact on the world.
+                At Bloom & Brew, we&apos;re more than just a tea company. We&apos;re a community of tea lovers, wellness enthusiasts, and environmental advocates. Join us in our mission to bring the finest organic herbal teas to your cup while making a positive impact on the world.
             </p>
           </div>
         </section>
