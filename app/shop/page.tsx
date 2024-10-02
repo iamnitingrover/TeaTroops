@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from 'next/image'
 //import { Leaf } from "lucide-react"
 
 const teas = [
@@ -22,7 +23,7 @@ export default function ShopPage() {
                 <CardDescription>{tea.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   alt={tea.name}
                   className="w-full h-48 object-cover rounded-md"
                   height="192"

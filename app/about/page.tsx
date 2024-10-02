@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Leaf, Instagram, Facebook, Twitter } from "lucide-react"
+import Image from 'next/image'
 
 export default function AboutUs() {
   return (
@@ -24,7 +25,7 @@ export default function AboutUs() {
                   Inspired by the rich traditions and healing properties of various cultures, Sarah set out to create a brand that would bring these ancient wisdom and flavors to modern tea enthusiasts.
                 </p>
               </div>
-              <img
+              <Image
                 alt="Bloom & Brew founder"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last lg:aspect-square"
                 height="550"
