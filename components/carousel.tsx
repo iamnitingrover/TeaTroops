@@ -4,16 +4,10 @@ import { useState, useEffect } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-
-interface Tea {
-  name: string;
-  description: string;
-  price: string;
-  slug: string;
-}
+import { Product } from "@/lib/products"
 
 interface CarouselProps {
-  teas: Tea[];
+  teas: Product[];
 }
 
 export function Carousel({ teas }: CarouselProps) {
@@ -45,7 +39,7 @@ export function Carousel({ teas }: CarouselProps) {
           }`}
         >
           <Image
-            src={`/images/${tea.slug}.jpg`}
+            src={tea.images.hero}
             alt={tea.name}
             layout="fill"
             objectFit="cover"
@@ -56,7 +50,7 @@ export function Carousel({ teas }: CarouselProps) {
               {tea.name}
             </h1>
             <p className="max-w-[700px] text-xl md:text-2xl">
-              {tea.description}
+              {tea.shortDescription}
             </p>
           </div>
         </Link>

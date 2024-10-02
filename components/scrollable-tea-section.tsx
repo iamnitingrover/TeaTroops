@@ -3,16 +3,10 @@
 import { TeaCard } from "@/components/tea-card"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useRef } from 'react'
-
-interface Tea {
-  name: string;
-  description: string;
-  price: string;
-  slug: string;
-}
+import { Product } from "@/lib/products"
 
 interface ScrollableTeaSectionProps {
-  teas: Tea[];
+  teas: Product[];
 }
 
 export function ScrollableTeaSection({ teas }: ScrollableTeaSectionProps) {
@@ -20,7 +14,7 @@ export function ScrollableTeaSection({ teas }: ScrollableTeaSectionProps) {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -300 : 300
+      const scrollAmount = direction === 'left' ? -400 : 400
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
     }
   }
@@ -28,9 +22,9 @@ export function ScrollableTeaSection({ teas }: ScrollableTeaSectionProps) {
   return (
     <div className="relative">
       <div className="overflow-x-auto scrollbar-hide scroll-smooth" ref={scrollRef}>
-        <div className="inline-flex space-x-4 md:space-x-6 p-4">
+        <div className="inline-flex space-x-6 p-4">
           {teas.map((tea) => (
-            <div key={tea.slug} className="w-64 flex-shrink-0">
+            <div key={tea.slug} className="w-80 flex-shrink-0">
               <TeaCard {...tea} />
             </div>
           ))}
