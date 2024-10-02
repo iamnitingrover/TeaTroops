@@ -1,6 +1,7 @@
 export interface Product {
   id: string;
   name: string;
+  displayName: string;
   description: string;
   shortDescription: string;
   sizes: {
@@ -20,6 +21,7 @@ export interface Product {
     name: string;
     icon: string;
   }>;
+  logo?: string;
 }
 
 //export const whatsappNumber = "9990033206";
@@ -29,6 +31,7 @@ export const products: Product[] = [
   {
     id: "1",
     name: "Himalayan Lavender Premium Herbal Tea",
+    displayName: "Lavender",
     description: "A soothing blend to calm your senses. This aromatic tea combines the gentle notes of lavender with a hint of chamomile, creating a perfect harmony that helps you unwind after a long day.",
     shortDescription: "A soothing blend to calm your senses",
     sizes: {
@@ -49,6 +52,7 @@ export const products: Product[] = [
       ],
       translucent: "/images/lavender/translucent.png"
     },
+    //logo: "/images/lavender-logo.svg",
     amazonUrl: "https://www.amazon.com/your-product-url",
     slug: "lavender",
     colorScheme: "#E6E6FA",
@@ -65,6 +69,7 @@ export const products: Product[] = [
   {
     id: "2",
     name: "Himalayan Hibiscus Premium Herbal Tea",
+    displayName: "Hibiscus",
     description: "A vibrant fusion of orange and lemon with a hint of ginger, this tea is perfect for a refreshing pick-me-up. Enjoy its invigorating flavor any time of the day.",
     shortDescription: "A vibrant fusion of orange and lemon",
     sizes: {
@@ -102,6 +107,7 @@ export const products: Product[] = [
   {
     id: "3",
     name: "Himalayan Chamomile Premium Herbal Tea",
+    displayName: "Chamomile",
     description: "Experience a refreshing burst of peppermint and spearmint in this revitalizing tea. Perfect for cooling down on a hot day or invigorating your senses.",
     shortDescription: "Refreshing burst of peppermint and spearmint",
     sizes: {
@@ -139,6 +145,7 @@ export const products: Product[] = [
   {
     id: "4",
     name: "Butterfly Pea Flower Premium Herbal Tea",
+    displayName: "Butterfly Pea Flower",
     description: "Indulge in the warm spices of cinnamon, cardamom, and cloves blended with black tea. This chai is perfect for those who enjoy a robust flavor profile.",
     shortDescription: "Warm spices blended with black tea",
     sizes: {
@@ -177,6 +184,7 @@ export const products: Product[] = [
   /*{
     id: "5",
     name: "Berry Bliss",
+    displayName: "Lavender",
     description: "A delightful blend of berries, including raspberry and blueberry, for a fruity and sweet experience. This tea is perfect for brightening your day.",
     shortDescription: "Fruity and sweet berry blend",
     sizes: {
@@ -210,6 +218,7 @@ export const products: Product[] = [
   {
     id: "6",
     name: "Green Harmony",
+    displayName: "Lavender",
     description: "A calming blend of green tea with jasmine and a hint of mint. This tea promotes relaxation and well-being, making it a perfect choice for mindfulness.",
     shortDescription: "Calming blend of green tea and jasmine",
     sizes: {
@@ -242,7 +251,11 @@ export const products: Product[] = [
   }*/
 ];
 
-export const getProduct = async (slug: string): Promise<Product | undefined> => {
+// export const getProduct = async (slug: string): Promise<Product | undefined> => {
+//   return products.find(product => product.slug === slug);
+// };
+
+export const getProduct = (slug: string): Product | undefined => {
   return products.find(product => product.slug === slug);
 };
 
