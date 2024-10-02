@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Leaf } from "lucide-react"
+//import { Leaf } from "lucide-react"
 
 const teas = [
   { name: "Lavender Serenity", description: "A soothing blend to calm your senses", price: "$12.99", slug: "lavender-serenity" },

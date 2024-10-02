@@ -1,7 +1,7 @@
 import { Carousel } from "@/components/carousel"
 import { ScrollableTeaSection } from "@/components/scrollable-tea-section"
 import { getAllProducts } from "@/lib/products"
-import Link from "next/link"
+//import Link from "next/link"
 import Image from "next/image"
 
 export default async function Home() {
