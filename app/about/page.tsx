@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Leaf, Instagram, Facebook, Twitter } from "lucide-react"
+import Image from 'next/image'
 
 export default function AboutUs() {
   return (
@@ -24,7 +25,7 @@ export default function AboutUs() {
                   Inspired by the rich traditions and healing properties of various cultures, Sarah set out to create a brand that would bring these ancient wisdom and flavors to modern tea enthusiasts.
                 </p>
               </div>
-              <img
+              <Image
                 alt="Bloom & Brew founder"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last lg:aspect-square"
                 height="550"
@@ -60,7 +61,7 @@ export default function AboutUs() {
           <div className="container px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-4">Join Our Journey</h2>
             <p className="max-w-[600px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                At Bloom & Brew, we&apos;re more than just a tea company. We&apos;re a community of tea lovers, wellness enthusiasts, and environmental advocates. Join us in our mission to bring the finest organic herbal teas to your cup while making a positive impact on the world.
+              At Bloom & Brew, we&apos;re more than just a tea company. We&apos;re a community of tea lovers, wellness enthusiasts, and environmental advocates. Join us in our mission to bring the finest organic herbal teas to your cup while making a positive impact on the world.
             </p>
           </div>
         </section>
