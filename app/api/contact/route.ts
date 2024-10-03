@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   const message = formData.get('message')
   const file = formData.get('file') as File | null
 
-  const transporter = nodemailer.createTransport({
+  let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
     secure: false,
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
       attachments: file ? [
         {
           filename: file.name,
-          content: await file.arrayBuffer(),
+          content: Buffer.from(await file.arrayBuffer()),
         }
       ] : [],
     })
