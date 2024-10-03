@@ -12,6 +12,7 @@ interface ProductDetailsProps {
 
 export default function ProductDetails({ product }: ProductDetailsProps) {
   const [quantity, setQuantity] = useState(1)
+  // @ts-ignore
   const [selectedSize, setSelectedSize] = useState(Object.keys(product.sizes)[0])
 
   const handleQuantityChange = (delta: number) => {
