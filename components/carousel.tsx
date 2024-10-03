@@ -31,9 +31,8 @@ export function Carousel({ teas }: CarouselProps) {
   return (
     <section className="relative w-full h-[calc(100vh-3.5rem)] overflow-hidden">
       {teas.map((tea, index) => (
-        <Link
+        <div
           key={tea.slug}
-          href={`/product/${tea.slug}`}
           className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentTeaIndex ? 'opacity-100' : 'opacity-0'
           }`}
@@ -52,8 +51,14 @@ export function Carousel({ teas }: CarouselProps) {
             <p className="max-w-[700px] text-xl md:text-2xl">
               {tea.shortDescription}
             </p>
+            <Link
+              href={`/product/${tea.slug}`}
+              className="mt-4 inline-block bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
-        </Link>
+        </div>
       ))}
       <button
         onClick={prevTea}
