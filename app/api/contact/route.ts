@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   const message = formData.get('message')
   const file = formData.get('file') as File | null
 
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
     secure: false,
