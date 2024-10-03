@@ -19,8 +19,15 @@ html, body {
 }
 
 @font-face {
+  font-family: "Poppins Light Italic";
+  src: url("https://db.onlinewebfonts.com/t/6b58f9ae7ab8ad8d3a717bea330799c1.woff2")format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Open Sauce One Regular';
-  src: url('/fonts/OpenSauceOne-Regular.woff2') format('woff2');
+  src: url("https://db.onlinewebfonts.com/t/cdf9e1a785f6767291f7e12174be6174.woff2") format('woff2');
   font-weight: normal;
   font-style: normal;
 }

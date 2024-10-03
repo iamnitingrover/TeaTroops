@@ -17,6 +17,7 @@ export interface Product {
   slug: string;
   colorScheme: string;
   linkColorScheme: string;
+  radiantColor: string;
   guidelines: string[];
   benefits: Array<{
     name: string;
@@ -36,9 +37,9 @@ export const products: Product[] = [
     description: "A soothing blend to calm your senses. This aromatic tea combines the gentle notes of lavender with a hint of chamomile, creating a perfect harmony that helps you unwind after a long day.",
     shortDescription: "A soothing blend to calm your senses",
     sizes: {
-      "50g": 12.99,
-      "100g": 22.99,
-      "250g": 49.99
+      "40g": 349
+      // "100g": 22.99,
+      // "250g": 49.99
     },
     images: {
       hero: "/images/lavender/hero.jpg",
@@ -53,11 +54,12 @@ export const products: Product[] = [
       ],
       translucent: "/images/lavender/translucent.png"
     },
-    //logo: "/images/lavender-logo.svg",
-    amazonUrl: "https://www.amazon.com/your-product-url",
+    logo: "/images/lavender/logo.svg",
+    amazonUrl: "https://www.amazon.in/dp/B0DJDCR2Y7/",
     slug: "lavender",
     colorScheme: "#E6E6FA",
-    linkColorScheme: "#000000",
+    linkColorScheme: "#61398E",
+    radiantColor:"#D8BFFF",
     guidelines: [
       "Steep in hot water for 3-5 minutes",
       "Enjoy before bedtime for best results",
@@ -75,9 +77,9 @@ export const products: Product[] = [
     description: "A vibrant fusion of orange and lemon with a hint of ginger, this tea is perfect for a refreshing pick-me-up. Enjoy its invigorating flavor any time of the day.",
     shortDescription: "A vibrant fusion of orange and lemon",
     sizes: {
-      "50g": 10.99,
-      "100g": 19.99,
-      "250g": 42.99
+      "50g": 185
+      // "100g": 19.99,
+      // "250g": 42.99
     },
     images: {
       hero: "/images/hibiscus/hero.jpg",
@@ -93,10 +95,12 @@ export const products: Product[] = [
       ],
       translucent: "/images/hibiscus/translucent.png"
     },
-    amazonUrl: "https://www.amazon.com/your-product-url",
+    amazonUrl: "https://www.amazon.in/dp/B0DJDB118W",
+    logo: "/images/hibiscus/logo.svg",
     slug: "hibiscus",
-    colorScheme: "#B6316C",
-    linkColorScheme: "#000000",
+    colorScheme: "#f5dace",
+    linkColorScheme: "#dc363d",
+    radiantColor:"#F7B293",
     guidelines: [
       "Steep in hot water for 4-6 minutes",
       "Best served chilled with ice",
@@ -114,9 +118,9 @@ export const products: Product[] = [
     description: "Experience a refreshing burst of peppermint and spearmint in this revitalizing tea. Perfect for cooling down on a hot day or invigorating your senses.",
     shortDescription: "Refreshing burst of peppermint and spearmint",
     sizes: {
-      "50g": 11.99,
-      "100g": 20.99,
-      "250g": 45.99
+      "30g": 185
+      // "100g": 20.99,
+      // "250g": 45.99
     },
     images: {
       hero: "/images/chamomile/hero.jpg",
@@ -132,10 +136,12 @@ export const products: Product[] = [
       ],
       translucent: "/images/chamomile/translucent.png"
     },
-    amazonUrl: "https://www.amazon.com/your-product-url",
+    amazonUrl: "https://www.amazon.in/dp/B0DJD9XBHD",
+    logo: "/images/chamomile/logo.svg",
     slug: "chamomile",
-    colorScheme: "#E9DBC4",
-    linkColorScheme: "#000000",
+    colorScheme: "#fad264",
+    linkColorScheme: "#a56928",
+    radiantColor:"#FFC83D",
     guidelines: [
       "Steep in hot water for 5-7 minutes",
       "Can be enjoyed hot or cold",
@@ -153,9 +159,9 @@ export const products: Product[] = [
     description: "Indulge in the warm spices of cinnamon, cardamom, and cloves blended with black tea. This chai is perfect for those who enjoy a robust flavor profile.",
     shortDescription: "Warm spices blended with black tea",
     sizes: {
-      "50g": 13.99,
-      "100g": 24.99,
-      "250g": 52.99
+      "30g": 275
+      // "100g": 24.99,
+      // "250g": 52.99
     },
     images: {
       hero: "/images/butterfly/hero.jpg",
@@ -172,10 +178,12 @@ export const products: Product[] = [
       ],
       translucent: "/images/butterfly/translucent.png"
     },
-    amazonUrl: "https://www.amazon.com/your-product-url",
+    amazonUrl: "https://www.amazon.in/dp/B0DJD92V93/",
+    logo: "/images/butterfly/logo.svg",
     slug: "butterfly",
-    colorScheme: "#4142b8",
-    linkColorScheme: "#000000",
+    colorScheme: "#c5d8ee",
+    linkColorScheme: "#204e96",
+    radiantColor:"#A3C7FF",
     guidelines: [
       "Steep in boiling water for 5 minutes",
       "Serve with milk for a creamy experience",
@@ -185,32 +193,35 @@ export const products: Product[] = [
       { name: "Warmth", icon: "🔥" },
       { name: "Invigorate", icon: "🌶️" }
     ]
-  }
-  /*{
+  },
+  {
     id: "5",
-    name: "Berry Bliss",
-    displayName: "Lavender",
+    name: "Butterfly Pea Flower & Hibiscus Premium Herbal Tea",
+    displayName: "Butterfly Pea Flower & Hibiscus",
     description: "A delightful blend of berries, including raspberry and blueberry, for a fruity and sweet experience. This tea is perfect for brightening your day.",
     shortDescription: "Fruity and sweet berry blend",
     sizes: {
-      "50g": 9.99,
-      "100g": 17.99,
-      "250g": 39.99
+      "80g": 399
+      // "100g": 17.99,
+      // "250g": 39.99
     },
     images: {
-      hero: "/images/berry-bliss-hero.jpg",
-      card: "/images/berry-bliss-card.jpg",
+      hero: "/images/butterfly-hibiscus/hero.jpg",
+      card: "/images/butterfly-hibiscus/card.jpg",
       details: [
-        "/images/berry-bliss-1.jpg",
-        "/images/berry-bliss-2.jpg",
-        "/images/berry-bliss-3.jpg",
+        "/images/butterfly-hibiscus/1.jpg",
+        "/images/butterfly-hibiscus/2.jpg",
+        "/images/butterfly-hibiscus/3.jpg",
+        "/images/butterfly-hibiscus/4.jpg",
+        "/images/butterfly-hibiscus/5.jpg",
       ],
       translucent: "/images/berry-bliss-translucent.png"
     },
-    amazonUrl: "https://www.amazon.com/your-product-url",
-    slug: "berry-bliss",
+    amazonUrl: "https://www.amazon.in/dp/B0DJDCDJW4",
+    slug: "butterfly-hibiscus",
     colorScheme: "#FF69B4",
     linkColorScheme: "#000000",
+    radiantColor:"#ffffff",
     guidelines: [
       "Steep in hot water for 3-5 minutes",
       "Great served iced with a slice of lemon",
@@ -223,29 +234,32 @@ export const products: Product[] = [
   },
   {
     id: "6",
-    name: "Green Harmony",
-    displayName: "Lavender",
+    name: "Butterfly Pea Flower & Chamomile",
+    displayName: "Butterfly Pea Flower & Chamomile",
     description: "A calming blend of green tea with jasmine and a hint of mint. This tea promotes relaxation and well-being, making it a perfect choice for mindfulness.",
     shortDescription: "Calming blend of green tea and jasmine",
     sizes: {
-      "50g": 14.99,
-      "100g": 26.99,
-      "250g": 54.99
+      "60g": 425
+      // "100g": 26.99,
+      // "250g": 54.99
     },
     images: {
-      hero: "/images/green-harmony-hero.jpg",
-      card: "/images/green-harmony-card.jpg",
+      hero: "/images/butterfly-chamomile/hero.jpg",
+      card: "/images/butterfly-chamomile/card.jpg",
       details: [
-        "/images/green-harmony-1.jpg",
-        "/images/green-harmony-2.jpg",
-        "/images/green-harmony-3.jpg",
+        "/images/butterfly-chamomile/1.jpg",
+        "/images/butterfly-chamomile/2.jpg",
+        "/images/butterfly-chamomile/3.jpg",
+        "/images/butterfly-chamomile/4.jpg",
+        "/images/butterfly-chamomile/5.jpg",
       ],
-      translucent: "/images/green-harmony-translucent.png"
+      translucent: "/images/butterfly-chamomile/translucent.png"
     },
-    amazonUrl: "https://www.amazon.com/your-product-url",
-    slug: "green-harmony",
+    amazonUrl: "https://www.amazon.in/dp/B0DJDD74BG",
+    slug: "butterfly-chamomile",
     colorScheme: "#8FBC8F",
     linkColorScheme: "#000000",
+    radiantColor:"#ffffff",
     guidelines: [
       "Steep in water below boiling for 2-3 minutes",
       "Enjoy plain or with a splash of lemon",
@@ -255,7 +269,7 @@ export const products: Product[] = [
       { name: "Calm", icon: "🌿" },
       { name: "Focus", icon: "🧘" }
     ]
-  }*/
+  }
 ];
 
 // export const getProduct = async (slug: string): Promise<Product | undefined> => {

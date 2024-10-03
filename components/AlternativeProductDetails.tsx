@@ -35,16 +35,16 @@ export function AlternativeProductDetails({ product }: AlternativeProductDetails
           </Link>
         </header>*/}
 
-        <div className="flex justify-center space-x-4 mb-4">
+        <div className="flex justify-center space-x-6 mb-12">
           {product.benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center text-sm">
-              <span className="mr-2">{benefit.icon}</span>
+            <div key={index} className="flex items-center space-x-2">
+              <span className="text-xl">{benefit.icon}</span>
               <span className="text-sm font-medium">{benefit.name}</span>
             </div>
           ))}
         </div>
 
-        <div className="flex-grow grid grid-cols-3 gap-4">
+        <div className=" grid grid-cols-2 gap-2">
           <div className="col-span-1">
             <h1 className="text-5xl font-bold mb-2" style={{ fontFamily: 'Open Sauce One Regular, sans-serif' }}>{product.displayName}</h1>
             <div className="flex flex-wrap gap-2 mb-4">
@@ -66,8 +66,8 @@ export function AlternativeProductDetails({ product }: AlternativeProductDetails
             <Image
               src={product.images.details[0]}
               alt={product.displayName}
-              width={1800}
-              height={1800}
+              width={800}
+              height={800}
               className="z-10"
             />
             <div 

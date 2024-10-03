@@ -5,8 +5,15 @@ export default function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-[url('/placeholder.svg?height=600&width=1200&text=Our+Story')] bg-cover bg-center">
-          <div className="container px-4 md:px-6">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative">
+          <Image
+            src="/images/our-story.jpg"
+            alt="Our Story"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+          />
+          <div className="container px-4 md:px-6 relative z-10">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white bg-black bg-opacity-50 p-4 rounded-lg inline-block">
               Our Story
             </h1>
@@ -28,8 +35,8 @@ export default function AboutUs() {
                 alt="Tea Troops founder"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last lg:aspect-square"
                 height="550"
-                src="/placeholder.svg?height=550&width=550&text=Founder+Image"
                 width="550"
+                src="/images/founder.jpg"
               />
             </div>
           </div>
@@ -60,7 +67,7 @@ export default function AboutUs() {
           <div className="container px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-4">Join Our Journey</h2>
             <p className="max-w-[600px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              At Tea Troops, we&apos;re more than just a tea company. We&apos;re a community of tea lovers, wellness enthusiasts, and environmental advocates. Join us in our mission to bring the finest organic herbal teas to your cup while making a positive impact on the world.
+              At Tea Troops, we're more than just a tea company. We're a community of tea lovers, wellness enthusiasts, and environmental advocates. Join us in our mission to bring the finest organic herbal teas to your cup while making a positive impact on the world.
             </p>
           </div>
         </section>

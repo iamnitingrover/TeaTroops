@@ -1,23 +1,90 @@
+"use client"
+
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Label } from "@/components/ui/label"
+import { useToast } from "@/hooks/use-toast"
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast()
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setIsSubmitting(true)
+
+    const formData = new FormData(event.currentTarget)
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (response.ok) {
+        toast({
+          title: "Message sent",
+          description: "We'll get back to you soon!",
+        })
+        event.currentTarget.reset()
+      } else {
+        throw new Error('Failed to send message')
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Contact Us</h1>
-      <form className="max-w-md mx-auto">
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-          <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required />
+      <h1 className="text-3xl font-bold mb-8 text-center">Contact Us</h1>
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6">
+        <div>
+          <Label htmlFor="name">Name</Label>
+          <Input type="text" id="name" name="name" required />
         </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required />
+        <div>
+          <Label htmlFor="email">Email</Label>
+          <Input type="email" id="email" name="email" required />
         </div>
-        <div className="mb-4">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-          <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required></textarea>
+        <div>
+          <Label htmlFor="subject">Subject</Label>
+          <Input type="text" id="subject" name="subject" required />
         </div>
-        <Button type="submit">Send Message</Button>
+        <div>
+          <Label htmlFor="mailType">Mail Type</Label>
+          <Select name="mailType" required>
+            <SelectTrigger>
+              <SelectValue placeholder="Select mail type" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="order">Order Related</SelectItem>
+              <SelectItem value="policy">Policy Related</SelectItem>
+              <SelectItem value="query">General Query</SelectItem>
+              <SelectItem value="sales">Sales</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div>
+          <Label htmlFor="message">Message</Label>
+          <Textarea id="message" name="message" rows={4} required />
+        </div>
+        <div>
+          <Label htmlFor="file">Attachment (optional)</Label>
+          <Input type="file" id="file" name="file" multiple />
+        </div>
+        <Button type="submit" disabled={isSubmitting} className="w-full">
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </Button>
       </form>
     </div>
   )
