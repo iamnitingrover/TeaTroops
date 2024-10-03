@@ -39,14 +39,14 @@ export function Carousel({ teas }: CarouselProps) {
         >
           <Image
             src={tea.images.hero}
-            alt={tea.name}
+            alt={tea.displayName}
             layout="fill"
             objectFit="cover"
             priority
           />
-          <div className="absolute bottom-8 left-8 text-white p-4 rounded">
+          <div className="absolute bottom-8 left-8 text-red p-4 rounded">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-2">
-              {tea.name}
+              {tea.displayName}
             </h1>
             <p className="max-w-[700px] text-xl md:text-2xl">
               {tea.shortDescription}

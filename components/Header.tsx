@@ -18,6 +18,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 px-4 lg:px-6 h-16 flex items-center justify-between" style={{ backgroundColor: headerColor }}>
       <Link className="flex items-center justify-center" href="/">
         <Image src={logoSrc} alt="Tea Troops Logo" width={40} height={40} className="w-auto h-8 sm:h-10" />
+        {/*<span className="ml-2 text-lg font-bold" style={{ color: linkColor }}>Tea Troops</span>*/}
       </Link>
       <nav className="flex gap-4 sm:gap-6">
         <Link className="text-sm font-medium hover:underline underline-offset-4" style={{ color: linkColor }} href="/">
@@ -36,5 +37,3 @@ export function Header() {
     </header>
   )
 }
-
-//        <span className="ml-2 text-lg font-bold" style={{ color: linkColor }}>Tea Troops</span>
