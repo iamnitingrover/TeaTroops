@@ -17,20 +17,20 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 lg:px-6 h-16 flex items-center justify-between" style={{ backgroundColor: headerColor }}>
       <Link className="flex items-center justify-center" href="/">
-        <Image src={logoSrc} alt="Tea Troops Logo" width={40} height={40} className="w-auto h-8 sm:h-10" />
+        <Image src={logoSrc} alt="Tea Troops Logo" width={64} height={64} className="w-auto h-8 sm:h-10" />
         {/*<span className="ml-2 text-lg font-bold" style={{ color: linkColor }}>Tea Troops</span>*/}
       </Link>
       <nav className="flex gap-4 sm:gap-6">
-        <Link className="text-sm font-medium hover:underline underline-offset-4" style={{ color: linkColor }} href="/">
+        <Link className="text-sm font-medium hover:underline underline-offset-4" aria-label="Home" style={{ color: linkColor }} href="/">
           Home
         </Link>
-        <Link className="text-sm font-medium hover:underline underline-offset-4" style={{ color: linkColor }} href="/shop">
+        <Link className="text-sm font-medium hover:underline underline-offset-4" aria-label="Shop" style={{ color: linkColor }} href="#">
           Shop
         </Link>
-        <Link className="text-sm font-medium hover:underline underline-offset-4" style={{ color: linkColor }} href="/about">
+        <Link className="text-sm font-medium hover:underline underline-offset-4" aria-label="About" style={{ color: linkColor }} href="/about">
           About
         </Link>
-        <Link className="text-sm font-medium hover:underline underline-offset-4" style={{ color: linkColor }} href="/contact">
+        <Link className="text-sm font-medium hover:underline underline-offset-4" aria-label="Contact" style={{ color: linkColor }} href="/contact">
           Contact
         </Link>
       </nav>

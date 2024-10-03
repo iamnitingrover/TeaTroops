@@ -31,7 +31,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
   }
 
   // You can toggle this flag to switch between designs
-  const useAlternativeDesign = true
+  const useAlternativeDesign = false
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: product.colorScheme }}>
