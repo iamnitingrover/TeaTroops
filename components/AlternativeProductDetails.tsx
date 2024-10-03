@@ -102,13 +102,13 @@ export function AlternativeProductDetails({ product }: AlternativeProductDetails
                 onClick={handleAmazonClick}
                 className="bg-[#FFffff] text-white px-3 py-1 rounded-full text-sm"
               >
-              <Image src={amazonLogoSrc} width={24} height={24}/>
+              <Image src={amazonLogoSrc} width={24} height={24} alt={'Buy Now on Amazon'}/>
               </button>
               <button
                 onClick={handleWhatsAppClick}
                 className="bg-[#25D366] text-white px-3 py-1 rounded-full text-sm"
               >
-                <Image src={whatsappLogoSrc} width={24} height={24}/>
+                <Image src={whatsappLogoSrc} width={24} height={24} alt={'Buy Now on Whatsapp'}/>
               </button>
             </div>
           </div>
