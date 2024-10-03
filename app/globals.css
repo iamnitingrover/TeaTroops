@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.active {
+  font-weight: bold; /* or any style to indicate active link */
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -28,6 +32,9 @@ html {
 @media (max-width: 640px) {
   .snap-mandatory {
     scroll-snap-type: none;
+  }
+  nav {
+    grid-template-columns: 1fr; /* Stack links in a single column */
   }
 }
 

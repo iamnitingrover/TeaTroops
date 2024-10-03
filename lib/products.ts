@@ -16,6 +16,7 @@ export interface Product {
   amazonUrl: string;
   slug: string;
   colorScheme: string;
+  linkColorScheme: string;
   guidelines: string[];
   benefits: Array<{
     name: string;
@@ -56,6 +57,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.com/your-product-url",
     slug: "lavender",
     colorScheme: "#E6E6FA",
+    linkColorScheme: "#000000",
     guidelines: [
       "Steep in hot water for 3-5 minutes",
       "Enjoy before bedtime for best results",
@@ -94,6 +96,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.com/your-product-url",
     slug: "hibiscus",
     colorScheme: "#B6316C",
+    linkColorScheme: "#000000",
     guidelines: [
       "Steep in hot water for 4-6 minutes",
       "Best served chilled with ice",
@@ -132,6 +135,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.com/your-product-url",
     slug: "chamomile",
     colorScheme: "#E9DBC4",
+    linkColorScheme: "#000000",
     guidelines: [
       "Steep in hot water for 5-7 minutes",
       "Can be enjoyed hot or cold",
@@ -171,6 +175,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.com/your-product-url",
     slug: "butterfly",
     colorScheme: "#4142b8",
+    linkColorScheme: "#000000",
     guidelines: [
       "Steep in boiling water for 5 minutes",
       "Serve with milk for a creamy experience",
@@ -205,6 +210,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.com/your-product-url",
     slug: "berry-bliss",
     colorScheme: "#FF69B4",
+    linkColorScheme: "#000000",
     guidelines: [
       "Steep in hot water for 3-5 minutes",
       "Great served iced with a slice of lemon",
@@ -239,6 +245,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.com/your-product-url",
     slug: "green-harmony",
     colorScheme: "#8FBC8F",
+    linkColorScheme: "#000000",
     guidelines: [
       "Steep in water below boiling for 2-3 minutes",
       "Enjoy plain or with a splash of lemon",
