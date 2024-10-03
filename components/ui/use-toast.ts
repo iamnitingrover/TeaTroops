@@ -2,11 +2,7 @@
 
 // Inspired by react-hot-toast library
 import * as React from "react"
-
-import type {
-  ToastActionElement,
-  ToastProps,
-} from "@/components/ui/toast"
+import type { ToastActionElement, ToastProps } from "@/components/ui/toast"
 
 const TOAST_LIMIT = 1
 const TOAST_REMOVE_DELAY = 1000000
@@ -25,25 +21,11 @@ function genId() {
   return count.toString()
 }
 
-type ActionType = "ADD_TOAST" | "UPDATE_TOAST" | "DISMISS_TOAST" | "REMOVE_TOAST"
-
 type Action =
-  | {
-      type: "ADD_TOAST"
-      toast: ToasterToast
-    }
-  | {
-      type: "UPDATE_TOAST"
-      toast: Partial<ToasterToast>
-    }
-  | {
-      type: "DISMISS_TOAST"
-      toastId?: ToasterToast["id"]
-    }
-  | {
-      type: "REMOVE_TOAST"
-      toastId?: ToasterToast["id"]
-    }
+  | { type: "ADD_TOAST"; toast: ToasterToast }
+  | { type: "UPDATE_TOAST"; toast: Partial<ToasterToast> }
+  | { type: "DISMISS_TOAST"; toastId?: ToasterToast["id"] }
+  | { type: "REMOVE_TOAST"; toastId?: ToasterToast["id"] }
 
 interface State {
   toasts: ToasterToast[]
