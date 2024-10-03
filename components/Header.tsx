@@ -12,7 +12,7 @@ export function Header() {
   const product = productSlug ? getProduct(productSlug) : null
   const headerColor = product ? product.colorScheme : 'white'
   const logoSrc = product && product.logo ? product.logo : '/logo.svg'
-  const linkColor = product ? product.colorScheme : '#00ab67'
+  const linkColor = product ? product.linkColorScheme : '#00ab67'
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 lg:px-6 h-16 flex items-center justify-between" style={{ backgroundColor: headerColor }}>
