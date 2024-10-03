@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "@/components/ui/use-toast"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -33,7 +33,8 @@ export default function ContactPage() {
       } else {
         throw new Error('Failed to send message')
       }
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error('Error sending message:', error)
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
