@@ -1,9 +1,8 @@
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  // This comment prevents the empty interface error
   // You can add custom props here if needed
 }
 
