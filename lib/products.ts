@@ -26,7 +26,7 @@ export interface Product {
   logo?: string;
 }
 
-export const whatsappNumber = "9990033206";
+export const whatsappNumber = "+919990033206";
 //export const whatsappNumber = "9758532379";
 
 export const products: Product[] = [
