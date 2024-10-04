@@ -30,7 +30,7 @@ export function Footer() {
           <nav className="grid grid-cols-2 gap-2 sm:grid-cols-2">
             <Link className="text-sm hover:underline" href="/" aria-label="Home" style={{ color: linkColor }}>Home</Link>
             <Link className="text-sm hover:underline" href="/privacy" aria-label="Privacy Policy" style={{ color: linkColor }}>Privacy Policy</Link>
-            <Link className="text-sm hover:underline" href="#" aria-label="Shop" style={{ color: linkColor }}>Shop</Link>
+            <Link className="text-sm hover:underline" href="/shop" aria-label="Shop" style={{ color: linkColor }}>Shop</Link>
             <Link className="text-sm hover:underline" href="/shipping" aria-label="Shipping Policy" style={{ color: linkColor }}>Shipping Policy</Link>
             <Link className="text-sm hover:underline" href="/about" aria-label="About" style={{ color: linkColor }}>About</Link>
             <Link className="text-sm hover:underline" href="/terms" aria-label="Terms and Conditions" style={{ color: linkColor }}>T&C</Link>

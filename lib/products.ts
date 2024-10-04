@@ -283,3 +283,8 @@ export const getProduct = (slug: string): Product | undefined => {
 export const getAllProducts = async (): Promise<Product[]> => {
   return products;
 };
+
+export async function getProducts(): Promise<Product[]> {
+  // In a real application, this would fetch products from an API or database
+  return products;
+}
