@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Input } from "@/components/ui/input"
 import { RangeSlider } from "@/components/ui/range-slider"
 import { Checkbox } from "@/components/ui/checkbox"

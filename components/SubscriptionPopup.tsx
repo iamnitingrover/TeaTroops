@@ -74,7 +74,7 @@ export default function SubscriptionPopup() {
           <Button type="submit" className="w-full">Subscribe</Button>
         </form>
         <button onClick={handleNotInterested} className="mt-4 text-sm text-gray-500 hover:underline">
-          No thanks, I'm not interested
+          No thanks, I&apos;m not interested
         </button>
       </div>
     </div>
