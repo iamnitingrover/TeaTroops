@@ -2,12 +2,14 @@ import { Carousel } from "@/components/carousel"
 import { ScrollableTeaSection } from "@/components/scrollable-tea-section"
 import { getAllProducts } from "@/lib/products"
 import Image from "next/image"
+import SubscriptionPopup from "@/components/SubscriptionPopup"
 
 export default async function Home() {
   const products = await getAllProducts();
 
   return (
     <div className="flex flex-col min-h-screen">
+      <SubscriptionPopup />
       <section className="h-screen">
         <Carousel teas={products} />
       </section>
@@ -55,5 +57,6 @@ export default async function Home() {
         </div>
       </section>
     </div>
+    
   )
 }

@@ -24,7 +24,7 @@ export function Header() {
         <Link className="text-sm font-medium hover:underline underline-offset-4" aria-label="Home" style={{ color: linkColor }} href="/">
           Home
         </Link>
-        <Link className="text-sm font-medium hover:underline underline-offset-4" aria-label="Shop" style={{ color: linkColor }} href="#">
+        <Link className="text-sm font-medium hover:underline underline-offset-4" aria-label="Shop" style={{ color: linkColor }} href="/shop">
           Shop
         </Link>
         <Link className="text-sm font-medium hover:underline underline-offset-4" aria-label="About" style={{ color: linkColor }} href="/about">
