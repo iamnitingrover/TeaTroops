@@ -1,3 +1,14 @@
+/**
+ * Handles the POST request to subscribe an email to a Google Sheet.
+ *
+ * This function expects a JSON payload with an `email` field. It uses the Google Sheets API
+ * to append the provided email to a specified Google Sheet.
+ *
+ * @param {Request} req - The incoming HTTP request.
+ * @returns {Promise<NextResponse>} - The response indicating the result of the subscription attempt.
+ *
+ * @throws {Error} - If there is an issue with the subscription process, an error is logged and a 500 status is returned.
+ */
 import { NextResponse } from 'next/server'
 import { google } from 'googleapis'
 

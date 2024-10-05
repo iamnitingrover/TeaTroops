@@ -1,3 +1,23 @@
+/**
+ * Handles the POST request to send an email using the provided form data.
+ * 
+ * @param {Request} request - The incoming request object containing form data.
+ * @returns {Promise<NextResponse>} - A promise that resolves to a NextResponse object indicating the result of the email sending operation.
+ * 
+ * The form data should include the following fields:
+ * - `name`: The name of the sender.
+ * - `email`: The email address of the sender.
+ * - `subject`: The subject of the email.
+ * - `mailType`: The type of the email (e.g., inquiry, support).
+ * - `message`: The message content of the email.
+ * - `file` (optional): An optional file attachment.
+ * 
+ * The function uses nodemailer to send the email via an SMTP server.
+ * The SMTP server configuration is retrieved from environment variables `EMAIL_USER` and `EMAIL_PASS`.
+ * 
+ * If the email is sent successfully, the function returns a JSON response with a success message and a status code of 200.
+ * If the email sending fails, the function logs the error and returns a JSON response with an error message and a status code of 500.
+ */
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
