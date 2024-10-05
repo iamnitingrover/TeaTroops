@@ -29,6 +29,7 @@ export async function POST(request: Request) {
   const mailType = formData.get('mailType')
   const message = formData.get('message')
   const file = formData.get('file') as File | null
+  const supportEmail = process.env.SUPPORT_EMAIL;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -43,7 +44,7 @@ export async function POST(request: Request) {
   try {
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: "help@teatroops.com",
+      to: supportEmail,
       subject: `${mailType}: ${subject}`,
       text: message as string,
       html: `<p>${message}</p>`,
