@@ -1,28 +1,112 @@
+/**
+ * Represents a product with various attributes and details.
+ */
 export interface Product {
+  /**
+   * Unique identifier for the product.
+   */
   id: string;
+
+  /**
+   * Name of the product.
+   */
   name: string;
+
+  /**
+   * Display name of the product.
+   */
   displayName: string;
+
+  /**
+   * Detailed description of the product.
+   */
   description: string;
+
+  /**
+   * Short description of the product.
+   */
   shortDescription: string;
+
+  /**
+   * Available sizes for the product, represented as a key-value pair where the key is the size identifier and the value is the price of the product.
+   */
   sizes: {
     [key: string]: number;
   };
+
+  /**
+   * Images associated with the product.
+   */
   images: {
+    /**
+     * Hero image of the product.
+     */
     hero: string;
+
+    /**
+     * Card image of the product.
+     */
     card: string;
+
+    /**
+     * Array of detail images of the product.
+     */
     details: string[];
+
+    /**
+     * Translucent image of the product.
+     */
     translucent: string;
   };
+
+  /**
+   * URL to the product's Amazon page.
+   */
   amazonUrl: string;
+
+  /**
+   * Slug for the product, typically used in URLs.
+   */
   slug: string;
+
+  /**
+   * Color scheme associated with the product.
+   */
   colorScheme: string;
+
+  /**
+   * Color scheme for links associated with the product.
+   */
   linkColorScheme: string;
+
+  /**
+   * Radiant color associated with the product.
+   */
   radiantColor: string;
+
+  /**
+   * Guidelines related to the product.
+   */
   guidelines: string[];
+
+  /**
+   * Benefits of the product, each with a name and an icon.
+   */
   benefits: Array<{
+    /**
+     * Name of the benefit.
+     */
     name: string;
+
+    /**
+     * Icon representing the benefit.
+     */
     icon: string;
   }>;
+
+  /**
+   * Optional logo of the product.
+   */
   logo?: string;
 }
 

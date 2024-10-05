@@ -4,6 +4,17 @@ import { getAllProducts } from "@/lib/products"
 import Image from "next/image"
 import SubscriptionPopup from "@/components/SubscriptionPopup"
 
+/**
+ * The Home component is an asynchronous function that fetches a list of products and renders the main page of the application.
+ * It includes several sections:
+ * 
+ * - A subscription popup.
+ * - A full-screen carousel displaying the products.
+ * - A section showcasing premium teas with a scrollable tea section.
+ * - An about section describing the Tea Troops brand, including a list of features and an image.
+ * 
+ * @returns {JSX.Element} The main page of the application.
+ */
 export default async function Home() {
   const products = await getAllProducts();
 

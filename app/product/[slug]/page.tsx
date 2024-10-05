@@ -4,6 +4,21 @@ import { getProduct } from '@/lib/products'
 import ProductDetails from '@/components/ProductDetails'
 import { Metadata } from 'next'
 
+/**
+ * Generates metadata for a product page based on the product slug.
+ *
+ * @param {Object} params - The parameters object.
+ * @param {string} params.slug - The slug of the product.
+ * @returns {Promise<Metadata>} A promise that resolves to the metadata object.
+ *
+ * The metadata includes:
+ * - `title`: The name of the product.
+ * - `description`: A short description of the product.
+ * - `openGraph`: An object containing Open Graph metadata:
+ *   - `title`: The name of the product.
+ *   - `description`: A short description of the product.
+ *   - `images`: An array with a single object containing the URL of the product's hero image.
+ */
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const product = await getProduct(params.slug)
   if (!product) {
@@ -21,6 +36,19 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
+/**
+ * Renders the product page based on the provided slug.
+ * 
+ * @param {Object} params - The parameters object.
+ * @param {string} params.slug - The slug of the product to fetch.
+ * 
+ * @returns {JSX.Element} The product page component.
+ * 
+ * @async
+ * @function ProductPage
+ * 
+ * @throws Will call `notFound` if the product is not found.
+ */
 export default async function ProductPage({ params }: { params: { slug: string } }) {
   const product = await getProduct(params.slug)
 
