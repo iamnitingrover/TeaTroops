@@ -45,23 +45,28 @@ export default function AboutUs() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center">
+              {[
+              {
+                title: "Sustainability",
+                description: "We are committed to sustainable farming practices and eco-friendly packaging to minimize our environmental impact.",
+              },
+              {
+                title: "Quality",
+                description: "We source only the finest organic ingredients to ensure every cup of tea is a premium experience.",
+              },
+              {
+                title: "Community",
+                description: "We support local farmers and communities, fostering fair trade practices and sustainable livelihoods.",
+              },
+              ].map((value, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
                 <Leaf className="h-12 w-12 mb-4 text-green-600" />
-                <h3 className="text-xl font-bold mb-2">Sustainability</h3>
-                <p className="text-gray-500">We are committed to sustainable farming practices and eco-friendly packaging to minimize our environmental impact.</p>
+                <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+                <p className="text-gray-500">{value.description}</p>
               </div>
-              <div className="flex flex-col items-center text-center">
-                <Leaf className="h-12 w-12 mb-4 text-green-600" />
-                <h3 className="text-xl font-bold mb-2">Quality</h3>
-                <p className="text-gray-500">We source only the finest organic ingredients to ensure every cup of tea is a premium experience.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Leaf className="h-12 w-12 mb-4 text-green-600" />
-                <h3 className="text-xl font-bold mb-2">Community</h3>
-                <p className="text-gray-500">We support local farmers and communities, fostering fair trade practices and sustainable livelihoods.</p>
-              </div>
+              ))}
             </div>
-          </div>
+        </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 text-center">

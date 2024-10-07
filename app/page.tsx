@@ -24,14 +24,12 @@ export default async function Home() {
       <section className="h-screen">
         <Carousel teas={products} />
       </section>
-      
       <section className="bg-[#f0f9f6]">
         <div className="container mx-auto px-4 md:px-6 py-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-[#00ab67]">Our Premium Teas</h2>
           <ScrollableTeaSection teas={products} />
         </div>
       </section>
-
       <section className="py-12 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -68,6 +66,5 @@ export default async function Home() {
         </div>
       </section>
     </div>
-    
   )
 }
