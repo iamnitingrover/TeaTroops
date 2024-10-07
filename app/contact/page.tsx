@@ -17,22 +17,21 @@ export default function ContactPage() {
     setIsSubmitting(true)
 
     const formData = new FormData(event.currentTarget)
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         body: formData,
       })
 
-      if (response.ok) {
-        toast({
-          title: "Message sent",
-          description: "We'll get back to you soon!",
-        })
-        event.currentTarget.reset()
-      } else {
+      if (!response.ok) {
         throw new Error('Failed to send message')
-      }
+      } 
+      toast({
+        title: "Message sent",
+        description: "We'll get back to you soon!",
+      })
+      event.currentTarget.reset()
     } catch (error: unknown) {
       console.error('Error sending message:', error)
       toast({
