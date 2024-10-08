@@ -32,12 +32,19 @@ export default function ProductCard({ product }: ProductCardProps) {
         </CardHeader>
         <CardContent className="pt-4 flex-grow flex flex-col">
           <div className="relative w-full pt-[75%] mb-4 flex-grow">
-            <Image
+            {/* <Image
               src={product.images.card}
               alt={product.name}
               layout="fill"
               objectFit="cover"
               className="rounded-md"
+            /> */}
+            <Image
+              src={product.images.card}
+              alt={product.name}
+              fill
+              className="rounded-md"
+              style={{ objectFit: 'cover' }}
             />
           </div>
           <p className="text-lg font-bold">₹{Object.values(product.sizes)[0]}</p>

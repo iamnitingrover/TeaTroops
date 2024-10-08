@@ -43,13 +43,23 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Image
+          {/* <Image
             src={images[currentImageIndex]}
             alt={`${productName} - Image ${currentImageIndex + 1}`}
             layout="fill"
             objectFit="contain"
             className={isZoomed ? 'scale-150' : ''}
             style={isZoomed ? { transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%` } : {}}
+          /> */}
+          <Image
+            src={images[currentImageIndex]}
+            alt={`${productName} - Image ${currentImageIndex + 1}`}
+            fill
+            className={`relative ${isZoomed ? 'scale-150' : ''}`}
+            style={{
+              objectFit: 'contain',
+              transformOrigin: isZoomed ? `${zoomPosition.x}% ${zoomPosition.y}%` : undefined,
+            }}
           />
         </div>
         <button
@@ -76,12 +86,19 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
               index === currentImageIndex ? 'border-black' : 'border-transparent'
             }`}
           >
-            <Image
+            {/* <Image
               src={image}
               alt={`${productName} - Thumbnail ${index + 1}`}
               width={64}
               height={64}
               objectFit="cover"
+            /> */}
+            <Image
+              src={image}
+              alt={`${productName} - Thumbnail ${index + 1}`}
+              width={64}
+              height={64}
+              style={{ objectFit: 'cover' }}
             />
           </button>
         ))}

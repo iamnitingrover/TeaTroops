@@ -38,3 +38,5 @@ next-env.d.ts
 notes.txt
 oldproductpagelayout.tsx
 .vscode/settings.json
+components/carousel.tsx
+components/ProductFilters.tsx

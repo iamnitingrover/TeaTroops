@@ -1,4 +1,4 @@
-import { Carousel } from "@/components/carousel"
+import { Carousel } from "@/components/Carousel/Carousel"
 import { ScrollableTeaSection } from "@/components/scrollable-tea-section"
 import { getAllProducts } from "@/lib/products"
 import Image from "next/image"
@@ -21,8 +21,9 @@ export default async function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <SubscriptionPopup />
-      <section className="h-screen">
-        <Carousel teas={products} />
+      {/* <section className="h-screen"> */}
+      <section>
+        <Carousel />
       </section>
       <section className="bg-[#f0f9f6]">
         <div className="container mx-auto px-4 md:px-6 py-12">
@@ -59,7 +60,7 @@ export default async function Home() {
               alt="Organic tea farm"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
               height={600}
-              src="/images/about-tea-farm.jpg"
+              src="/images/about-tea-farm.webp"
               width={600}
             />
           </div>
