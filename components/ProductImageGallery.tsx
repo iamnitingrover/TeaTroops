@@ -36,20 +36,30 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
 
   return (
     <div className="flex flex-col w-full h-full">
-      <div className="relative w-full h-0 pb-[100%]">
+      <div className="relative w-full h-0 pb-[80%]">
         <div
           className="absolute inset-0 overflow-hidden cursor-zoom-in"
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Image
+          {/* <Image
             src={images[currentImageIndex]}
             alt={`${productName} - Image ${currentImageIndex + 1}`}
             layout="fill"
             objectFit="contain"
             className={isZoomed ? 'scale-150' : ''}
             style={isZoomed ? { transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%` } : {}}
+          /> */}
+          <Image
+            src={images[currentImageIndex]}
+            alt={`${productName} - Image ${currentImageIndex + 1}`}
+            fill
+            className={`relative ${isZoomed ? 'scale-150' : ''}`}
+            style={{
+              objectFit: 'contain',
+              transformOrigin: isZoomed ? `${zoomPosition.x}% ${zoomPosition.y}%` : undefined,
+            }}
           />
         </div>
         <button
@@ -72,16 +82,23 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
           <button
             key={index}
             onClick={() => setCurrentImageIndex(index)}
-            className={`w-16 h-16 border-2 ${
+            className={`w-14 h-14 border-2 ${
               index === currentImageIndex ? 'border-black' : 'border-transparent'
             }`}
           >
-            <Image
+            {/* <Image
               src={image}
               alt={`${productName} - Thumbnail ${index + 1}`}
               width={64}
               height={64}
               objectFit="cover"
+            /> */}
+            <Image
+              src={image}
+              alt={`${productName} - Thumbnail ${index + 1}`}
+              width={56}
+              height={56}
+              style={{ objectFit: 'cover' }}
             />
           </button>
         ))}

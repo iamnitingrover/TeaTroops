@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { getProduct } from '@/lib/products'
+import { Ticker } from './Ticker'
 
 export function Header() {
   const pathname = usePathname()
@@ -15,7 +16,9 @@ export function Header() {
   const linkColor = product ? product.linkColorScheme : '#00ab67'
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 lg:px-6 h-16 flex items-center justify-between" style={{ backgroundColor: headerColor }}>
+    <>
+    <Ticker />
+    <header className="sticky top-8 left-0 right-0 z-40 px-4 lg:px-6 h-16 flex items-center justify-between" style={{ backgroundColor: headerColor }}>
       <Link className="flex items-center justify-center" href="/">
         <Image src={logoSrc} alt="Tea Troops Logo" width={64} height={64} className="w-auto h-8 sm:h-10" />
         {/*<span className="ml-2 text-lg font-bold" style={{ color: linkColor }}>Tea Troops</span>*/}
@@ -35,5 +38,6 @@ export function Header() {
         </Link>
       </nav>
     </header>
+    </>
   )
 }

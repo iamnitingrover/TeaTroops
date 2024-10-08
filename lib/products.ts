@@ -110,8 +110,7 @@ export interface Product {
   logo?: string;
 }
 
-export const whatsappNumber = "+919990033206";
-//export const whatsappNumber = "9758532379";
+export const whatsappNumber = process.env.WHATSAPP_NUMBER;
 
 export const products: Product[] = [
   {
@@ -129,7 +128,7 @@ export const products: Product[] = [
       hero: "/images/lavender/hero.jpg",
       card: "/images/lavender/card.jpg",
       details: [
-        "/images/lavender/1.jpg",
+        "/images/lavender/1.webp",
         "/images/lavender/2.jpg",
         "/images/lavender/3.jpg",
         "/images/lavender/4.jpg",
@@ -169,7 +168,7 @@ export const products: Product[] = [
       hero: "/images/hibiscus/hero.jpg",
       card: "/images/hibiscus/card.jpg",
       details: [
-        "/images/hibiscus/1.jpg",
+        "/images/hibiscus/1.webp",
         "/images/hibiscus/2.jpg",
         "/images/hibiscus/3.jpg",
         "/images/hibiscus/4.jpg",
@@ -210,7 +209,7 @@ export const products: Product[] = [
       hero: "/images/chamomile/hero.jpg",
       card: "/images/chamomile/card.jpg",
       details: [
-        "/images/chamomile/1.jpg",
+        "/images/chamomile/1.webp",
         "/images/chamomile/2.jpg",
         "/images/chamomile/3.jpg",
         "/images/chamomile/4.jpg",
@@ -251,7 +250,7 @@ export const products: Product[] = [
       hero: "/images/butterfly/hero.jpg",
       card: "/images/butterfly/card.jpg",
       details: [
-        "/images/butterfly/1.jpg",
+        "/images/butterfly/1.webp",
         "/images/butterfly/2.jpg",
         "/images/butterfly/3.jpg",
         "/images/butterfly/4.jpg",
@@ -293,7 +292,7 @@ export const products: Product[] = [
       hero: "/images/butterfly-hibiscus/hero.jpg",
       card: "/images/butterfly-hibiscus/card.jpg",
       details: [
-        "/images/butterfly-hibiscus/1.jpg",
+        "/images/butterfly-hibiscus/1.webp",
         "/images/butterfly-hibiscus/2.jpg",
         "/images/butterfly-hibiscus/3.jpg",
         "/images/butterfly-hibiscus/4.jpg",
@@ -331,7 +330,7 @@ export const products: Product[] = [
       hero: "/images/butterfly-chamomile/hero.jpg",
       card: "/images/butterfly-chamomile/card.jpg",
       details: [
-        "/images/butterfly-chamomile/1.jpg",
+        "/images/butterfly-chamomile/1.webp",
         "/images/butterfly-chamomile/2.jpg",
         "/images/butterfly-chamomile/3.jpg",
         "/images/butterfly-chamomile/4.jpg",

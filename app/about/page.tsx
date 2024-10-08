@@ -1,77 +1,89 @@
-import { Leaf } from "lucide-react"
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us | Tea Troops',
+  description: 'Learn about Tea Troops, our story, and our commitment to providing premium organic herbal teas.',
+}
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative">
-          <Image
-            src="/images/our-story.jpg"
-            alt="Our Story"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-          <div className="container px-4 md:px-6 relative z-10">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white bg-black bg-opacity-50 p-4 rounded-lg inline-block">
-              Our Story
-            </h1>
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <h1 className="text-4xl font-bold text-center mb-8">ABOUT US</h1>
+      <div className="space-y-8">
+        <section className="flex items-center">
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold mb-4">Welcome to Tea Troops!</h2>
+            <p className="mb-4">
+              We are a small business based in Delhi, India. My family roots are from Uttarakhand and we came to Delhi before I was born. Landscape around me had in progress construction work and busy roads, so a void always existed. When we visited my uncle in our village, he made me taste different herbs it helped me develop a taste and moreover now I value this treasure more than ever. Interestingly I developed this habit to serve this to friend's n family at breakfast. Though I'm one of those who also sometimes enjoys milk in my tea but these herbal cups have helped my family especially my parents reduce their daily caffeine tea intake. That is the beauty of tea and mind it enjoying tea with wonderful company exaggerates its flavours.
+            </p>
+          </div>
+          <div className="w-1/3 pl-8">
+            <Image
+              src="/images/about-us/1.webp"
+              alt="Blue flower illustration"
+              width={300}
+              height={300}
+              className="w-full h-auto"
+            />
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">About Tea Troops</h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Founded in 2024, Tea Troops was born out of a passion for organic, ethically sourced herbal teas. Our journey began when our founder, Shreya, discovered the transformative power of herbal teas during her travels across Asia and Europe.
-                </p>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Inspired by the rich traditions and healing properties of various cultures, Shreya set out to create a brand that would bring these ancient wisdom and flavors to modern tea enthusiasts.
-                </p>
-              </div>
-              <Image
-                alt="Tea Troops founder"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last lg:aspect-square"
-                height="550"
-                width="550"
-                src="/images/founder.jpg"
-              />
-            </div>
+
+        <section className="flex items-center">
+          <div className="w-1/3 pr-8">
+            <Image
+              src="/images/about-us/2.webp"
+              alt="Lavender illustration"
+              width={300}
+              height={300}
+              className="w-full h-auto"
+            />
           </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center">
-                <Leaf className="h-12 w-12 mb-4 text-green-600" />
-                <h3 className="text-xl font-bold mb-2">Sustainability</h3>
-                <p className="text-gray-500">We are committed to sustainable farming practices and eco-friendly packaging to minimize our environmental impact.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Leaf className="h-12 w-12 mb-4 text-green-600" />
-                <h3 className="text-xl font-bold mb-2">Quality</h3>
-                <p className="text-gray-500">We source only the finest organic ingredients to ensure every cup of tea is a premium experience.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Leaf className="h-12 w-12 mb-4 text-green-600" />
-                <h3 className="text-xl font-bold mb-2">Community</h3>
-                <p className="text-gray-500">We support local farmers and communities, fostering fair trade practices and sustainable livelihoods.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-4">Join Our Journey</h2>
-            <p className="max-w-[600px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              At Tea Troops, we&apos;re more than just a tea company. We&apos;re a community of tea lovers, wellness enthusiasts, and environmental advocates. Join us in our mission to bring the finest organic herbal teas to your cup while making a positive impact on the world.
+          <div className="flex-1">
+            <p className="mb-4">
+              We know that we can't solve the issue that affects nature in major way but I believe every bit counts. There is always search of sustainable material for the packaging.
+            </p>
+            <p className="mb-4">
+              While we're not perfect, we are committed to improve and are therefore constantly evolving. It is also very important to make sure our teas are ethically sourced.
             </p>
           </div>
         </section>
-      </main>
+
+        <section className="flex items-center">
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold mb-4">What does Tea Troops mean?</h2>
+            <p className="mb-4">
+              Troop that loves herbal tea. Tea Troops beyond its meaning it supports group of people that is working in fields to produce fresh, organic and natural ingredient something which appears simple but has a complex nature.
+            </p>
+            <h2 className="text-2xl font-semibold mb-4">Our Teas</h2>
+            <p className="mb-4">
+              Yes! It is Permutation and combination with intense study also running behind our valuable clients who loves herbal tea and happily shares their experiences. We are building our teas.
+            </p>
+            <p className="mb-4">
+              We all love nature and nature based ingredient, and Tea Troops just bring the same for all of you with the help of our Troops.
+            </p>
+          </div>
+          <div className="w-1/3 pl-8">
+            <Image
+              src="/images/about-us/3.webp"
+              alt="Yellow flower illustration"
+              width={300}
+              height={300}
+              className="w-full h-auto"
+            />
+          </div>
+        </section>
+
+        <div className="text-center">
+          <Image
+            src="/images/about-us/4.webp"
+            alt="Fennel illustration"
+            width={200}
+            height={200}
+            className="mx-auto"
+          />
+        </div>
+      </div>
     </div>
   )
 }
