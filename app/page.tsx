@@ -21,7 +21,6 @@ export default async function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <SubscriptionPopup />
-      {/* <section className="h-screen"> */}
       <section>
         <Carousel />
       </section>

@@ -31,7 +31,7 @@ export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl 
   }
 
   return (
-    <section className="relative w-full h-[calc(100vh-4rem)] overflow-hidden">
+    <section className="relative w-full h-[calc(100vh-6rem)] overflow-hidden">
       {images.map((image, index) => (
         <Link
           key={image.id}
