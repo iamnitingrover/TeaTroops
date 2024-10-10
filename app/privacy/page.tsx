@@ -4,7 +4,7 @@ export default function PrivacyPage() {
       <h1 className="text-3xl font-light mb-6">Privacy Policy</h1>
       
       <p className="font-light mb-4">
-        Tea Troops places the utmost attention on our guests' privacy and safety. This policy outlines 
+        Tea Troops places the utmost attention on our guest&apos;s privacy and safety. This policy outlines 
         the precautions we take to protect and securely handle your personal data whenever you visit 
         or interact with our website or staff. First and foremost, without your consent, we never rent, 
         sell, or trade any of your personal information—such as name, address, phone number, credit 
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           such as your IP address, operating system, and browser type. This information does not 
           personally identify any individual; rather, it is statistical and aggregate data on your browsing 
           habits and behaviors.</li>
-          <li>Additionally, we might use a cookie file that is kept on your computer's hard drive to gather 
+          <li>Additionally, we might use a cookie file that is kept on your computer&apos;s hard drive to gather 
           data about how you generally use the Internet. They support our efforts to make our website 
           better and provide you with more individualized service.</li>
         </ul>
