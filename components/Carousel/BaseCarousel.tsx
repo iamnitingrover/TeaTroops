@@ -1,6 +1,6 @@
 // components/Carousel/BaseCarousel.tsx
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -13,6 +13,8 @@ interface BaseCarouselProps<T extends BaseCarouselImage> {
 
 export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl }: BaseCarouselProps<T>) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [carouselHeight, setCarouselHeight] = useState(0)
+  const carouselRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -21,6 +23,22 @@ export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl 
 
     return () => clearInterval(timer)
   }, [images.length])
+
+  useEffect(() => {
+    const updateCarouselHeight = () => {
+      if (carouselRef.current) {
+        const viewportHeight = window.innerHeight
+        const tickerHeight = document.querySelector('.ticker')?.clientHeight || 0
+        const headerHeight = document.querySelector('header')?.clientHeight || 0
+        const remainingHeight = viewportHeight - tickerHeight - headerHeight
+        setCarouselHeight(remainingHeight)
+      }
+    }
+
+    updateCarouselHeight()
+    window.addEventListener('resize', updateCarouselHeight)
+    return () => window.removeEventListener('resize', updateCarouselHeight)
+  }, [])
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
@@ -31,7 +49,11 @@ export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl 
   }
 
   return (
-    <section className="relative w-full h-[calc(100vh-6rem)] overflow-hidden">
+    <section       
+      ref={carouselRef} 
+      className="relative w-full overflow-hidden"
+      style={{ height: `${carouselHeight}px` }}
+    >
       {images.map((image, index) => (
         <Link
           key={image.id}
@@ -52,6 +74,7 @@ export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl 
             alt={`Carousel image ${image.id}`}
             fill
             priority
+            sizes="100vw"
             style={{ objectFit: 'cover' }}
             />
         </Link>

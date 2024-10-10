@@ -23,6 +23,8 @@ interface ProductCardProps {
  * @returns {JSX.Element} The rendered product card component.
  */
 export default function ProductCard({ product }: ProductCardProps) {
+  const firstSize = Object.keys(product.sizes)[0];
+  const { price, discountedPrice } = product.sizes[firstSize];
   return (
     <Link href={`/product/${product.slug}`}>
       <Card className="cursor-pointer transition-shadow hover:shadow-lg h-full flex flex-col">
@@ -47,7 +49,12 @@ export default function ProductCard({ product }: ProductCardProps) {
               style={{ objectFit: 'cover' }}
             />
           </div>
-          <p className="text-lg font-bold">₹{Object.values(product.sizes)[0]}</p>
+          <div className="flex items-baseline gap-2">
+            <p className="text-lg font-light">₹{discountedPrice || price}</p>
+            {discountedPrice && (
+              <p className="text-sm line-through text-gray-500">₹{price}</p>
+            )}
+          </div>
         </CardContent>
       </Card>
     </Link>

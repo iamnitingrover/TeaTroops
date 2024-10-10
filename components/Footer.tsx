@@ -13,7 +13,7 @@ export function Footer() {
   const product = productSlug ? getProduct(productSlug) : null
   const footerColor = product ? product.colorScheme : 'white'
   const logoSrc = product && product.logo ? product.logo : '/logo.svg'
-  const linkColor = product ? product.linkColorScheme : '#00ab67'
+  const linkColor = product ? product.linkColorScheme : '#00AB6A'
 
   return (
     <footer className="w-full py-8 px-4 md:px-6" style={{ backgroundColor: footerColor }}>
@@ -21,7 +21,7 @@ export function Footer() {
         <div>
           <Link href="/" className="flex items-center mb-4">
           <Image src={logoSrc} alt="Tea Troops Logo" width={64} height={64} className="w-auto h-20 sm:h-16" />
-            {/*<span className="ml-2 text-lg font-bold text-[#00ab67]">Tea Troops</span>*/}
+            {/*<span className="ml-2 text-lg font-bold text-[#00AB6A]">Tea Troops</span>*/}
           </Link>
           <p className="text-sm text-gray-600">Premium organic herbal teas for your daily ritual.</p>
         </div>
@@ -39,7 +39,7 @@ export function Footer() {
         </nav>
         </div>
         <div className='flex-grow'>
-          <h3 className="font-bold mb-4" style={{ color: linkColor }}>Connect With Us</h3>
+          <h3 className="font-medium mb-4" style={{ color: linkColor }}>Connect With Us</h3>
           <div className="flex gap-3 mb-3">
             <Link className="text-gray-600" href="#">
               <Instagram className="h-8 w-8" />
@@ -60,7 +60,7 @@ export function Footer() {
       <div className="mt-8 text-center">
         <div className="flex items-center justify-center gap-1 text-sm text-gray-600">
           Made with <Heart className="h-4 w-4 text-red-500" /> by{' '}
-          <Link href="https://nitingrover.in" target="_blank" rel="noopener noreferrer" className="font-medium hover:underline">
+          <Link href="https://nitingrover.in" target="_blank" rel="noopener noreferrer" className="hover:underline">
             Nitin Grover
           </Link>
         </div>
