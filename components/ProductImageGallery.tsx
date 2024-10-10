@@ -36,7 +36,7 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
 
   return (
     <div className="flex flex-col w-full h-full">
-      <div className="relative w-full h-0 pb-[80%]">
+      <div className="relative w-full h-0 pb-[70%]">
         <div
           className="absolute inset-0 overflow-hidden cursor-zoom-in"
           onMouseMove={handleMouseMove}

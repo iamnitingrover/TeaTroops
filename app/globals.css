@@ -1,11 +1,25 @@
+/* Tailwind Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.active {
-  font-weight: bold; /* or any style to indicate active link */
+/* Import Lato Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Base Font Settings */
+@layer base {
+  body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular */
+  }
+
+  h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; /* Light */
+  }
 }
 
+/* Layout & Structure */
 html, body {
   height: 100%;
   width: 100%;
@@ -18,123 +32,101 @@ html, body {
   width: 100%;
 }
 
-@font-face {
-  font-family: "Poppins Light Italic";
-  src: url("https://db.onlinewebfonts.com/t/6b58f9ae7ab8ad8d3a717bea330799c1.woff2")format("woff2");
-  font-weight: normal;
-  font-style: normal;
+/* Navigation Styles */
+.active {
+  font-weight: bold;
 }
 
-@font-face {
-  font-family: 'Open Sauce One Regular';
-  src: url("https://db.onlinewebfonts.com/t/cdf9e1a785f6767291f7e12174be6174.woff2") format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* Scroll Behavior */
 html {
   scroll-behavior: smooth;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 640px) {
   .snap-mandatory {
     scroll-snap-type: none;
   }
   nav {
-    grid-template-columns: 1fr; /* Stack links in a single column */
+    grid-template-columns: 1fr;
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Utility Classes */
+/* Scrollbar Hiding */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* Add smooth scrolling behavior */
 .scroll-smooth {
   scroll-behavior: smooth;
 }
- 
+
+/* Theme Configuration */
 @layer base {
   :root {
+    /* Light Theme Variables */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
- 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
- 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
- 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
- 
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
- 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
- 
     --ring: 215 20.2% 65.1%;
- 
     --radius: 0.5rem;
   }
- 
+
   .dark {
+    /* Dark Theme Variables */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
- 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
- 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
- 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
- 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
- 
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
- 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
- 
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
- 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
- 
     --ring: 217.2 32.6% 17.5%;
   }
 }
- 
+
+/* Base Styles */
 @layer base {
   * {
     @apply border-border;
   }
+  
   body {
-    @apply font-nohemi;
     @apply bg-background text-foreground;
   }
+  
   h1, h2, h3, h4, h5, h6, strong {
     @apply font-bold;
   }

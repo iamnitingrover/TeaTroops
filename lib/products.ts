@@ -31,9 +31,11 @@ export interface Product {
    * Available sizes for the product, represented as a key-value pair where the key is the size identifier and the value is the price of the product.
    */
   sizes: {
-    [key: string]: number;
+    [key: string]: {
+      price: number;
+      discountedPrice?: number;
+    };
   };
-
   /**
    * Images associated with the product.
    */
@@ -120,13 +122,13 @@ export const products: Product[] = [
     description: "A soothing blend to calm your senses. This aromatic tea combines the gentle notes of lavender with a hint of chamomile, creating a perfect harmony that helps you unwind after a long day.",
     shortDescription: "A soothing blend to calm your senses",
     sizes: {
-      "40g": 349
+      "40g": { price: 599, discountedPrice: 349 }
       // "100g": 22.99,
       // "250g": 49.99
     },
     images: {
       hero: "/images/lavender/hero.jpg",
-      card: "/images/lavender/card.jpg",
+      card: "/images/lavender/1.webp",
       details: [
         "/images/lavender/1.webp",
         "/images/lavender/2.jpg",
@@ -149,8 +151,9 @@ export const products: Product[] = [
       "Can be served hot or iced"
     ],
     benefits: [
-      { name: "Relax", icon: "🍃" },
-      { name: "Sleep", icon: "🌙" }
+      { name: "Helps with Anxiety", icon: "🍃" },
+      { name: "Depression", icon: "🌙" },
+      { name: "Restore Hair Loss", icon: "🌙" }
     ]
   },
   {
@@ -160,13 +163,13 @@ export const products: Product[] = [
     description: "A vibrant fusion of orange and lemon with a hint of ginger, this tea is perfect for a refreshing pick-me-up. Enjoy its invigorating flavor any time of the day.",
     shortDescription: "A vibrant fusion of orange and lemon",
     sizes: {
-      "50g": 185
+      "50g": { price: 299, discountedPrice: 185 }
       // "100g": 19.99,
       // "250g": 42.99
     },
     images: {
       hero: "/images/hibiscus/hero.jpg",
-      card: "/images/hibiscus/card.jpg",
+      card: "/images/hibiscus/1.webp",
       details: [
         "/images/hibiscus/1.webp",
         "/images/hibiscus/2.jpg",
@@ -190,8 +193,9 @@ export const products: Product[] = [
       "Add honey for extra sweetness"
     ],
     benefits: [
-      { name: "Energize", icon: "⚡" },
-      { name: "Immunity Boost", icon: "💪" }
+      { name: "Antioxidants", icon: "⚡" },
+      { name: "Lowers BP", icon: "💪" },
+      { name: "Glowing Skin", icon: "💪" }
     ]
   },
   {
@@ -201,13 +205,13 @@ export const products: Product[] = [
     description: "Experience a refreshing burst of peppermint and spearmint in this revitalizing tea. Perfect for cooling down on a hot day or invigorating your senses.",
     shortDescription: "Refreshing burst of peppermint and spearmint",
     sizes: {
-      "30g": 185
+      "30g": { price: 299, discountedPrice: 185 }
       // "100g": 20.99,
       // "250g": 45.99
     },
     images: {
       hero: "/images/chamomile/hero.jpg",
-      card: "/images/chamomile/card.jpg",
+      card: "/images/chamomile/1.webp",
       details: [
         "/images/chamomile/1.webp",
         "/images/chamomile/2.jpg",
@@ -231,8 +235,8 @@ export const products: Product[] = [
       "Perfect after meals for digestion"
     ],
     benefits: [
-      { name: "Refresh", icon: "💧" },
-      { name: "Digestive Aid", icon: "🍵" }
+      { name: "Sleep", icon: "💧" },
+      { name: "Relaxation", icon: "🍵" }
     ]
   },
   {
@@ -242,13 +246,13 @@ export const products: Product[] = [
     description: "Indulge in the warm spices of cinnamon, cardamom, and cloves blended with black tea. This chai is perfect for those who enjoy a robust flavor profile.",
     shortDescription: "Warm spices blended with black tea",
     sizes: {
-      "30g": 275
+      "30g": { price: 399, discountedPrice: 275 }
       // "100g": 24.99,
       // "250g": 52.99
     },
     images: {
       hero: "/images/butterfly/hero.jpg",
-      card: "/images/butterfly/card.jpg",
+      card: "/images/butterfly/1.webp",
       details: [
         "/images/butterfly/1.webp",
         "/images/butterfly/2.jpg",
@@ -273,8 +277,8 @@ export const products: Product[] = [
       "Add sugar or honey to taste"
     ],
     benefits: [
-      { name: "Warmth", icon: "🔥" },
-      { name: "Invigorate", icon: "🌶️" }
+      { name: "Antioxidants", icon: "🔥" },
+      { name: "Anti-Ageing", icon: "🌶️" }
     ]
   },
   {
@@ -284,13 +288,13 @@ export const products: Product[] = [
     description: "A delightful blend of berries, including raspberry and blueberry, for a fruity and sweet experience. This tea is perfect for brightening your day.",
     shortDescription: "Fruity and sweet berry blend",
     sizes: {
-      "80g": 399
+      "80g": { price: 689, discountedPrice: 399 }
       // "100g": 17.99,
       // "250g": 39.99
     },
     images: {
       hero: "/images/butterfly-hibiscus/hero.jpg",
-      card: "/images/butterfly-hibiscus/card.jpg",
+      card: "/images/butterfly-hibiscus/1.webp",
       details: [
         "/images/butterfly-hibiscus/1.webp",
         "/images/butterfly-hibiscus/2.jpg",
@@ -322,13 +326,13 @@ export const products: Product[] = [
     description: "A calming blend of green tea with jasmine and a hint of mint. This tea promotes relaxation and well-being, making it a perfect choice for mindfulness.",
     shortDescription: "Calming blend of green tea and jasmine",
     sizes: {
-      "60g": 425
+      "60g": { price: 698, discountedPrice: 425 }
       // "100g": 26.99,
       // "250g": 54.99
     },
     images: {
       hero: "/images/butterfly-chamomile/hero.jpg",
-      card: "/images/butterfly-chamomile/card.jpg",
+      card: "/images/butterfly-chamomile/1.webp",
       details: [
         "/images/butterfly-chamomile/1.webp",
         "/images/butterfly-chamomile/2.jpg",

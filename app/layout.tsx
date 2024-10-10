@@ -4,23 +4,6 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { VercelAnalytics } from './analytics'
 import Script from 'next/script'
-import localFont from 'next/font/local'
-
-const nohemi = localFont({
-  src: [
-    {
-      path: './fonts/Nohemi-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/Nohemi-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-nehomi',
-})
 
 export const metadata: Metadata = {
   title: {
@@ -45,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={nohemi.variable}>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <Script
@@ -61,10 +44,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`font-nehomi ${nohemi.className}`}>
-        <div className="flex flex-col min-h-screen">
+      <body>
+        <div className="flex flex-col min-h-screen ">
           <Header />
-          <main className="flex-grow">
+          <main className="flex-grow flex flex-col">
             {children}
           </main>
           <Footer />

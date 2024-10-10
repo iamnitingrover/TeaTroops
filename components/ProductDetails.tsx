@@ -27,27 +27,29 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   const color = product.colorScheme;
   const radiantColor = product.radiantColor;
 
+  const { price, discountedPrice } = product.sizes[selectedSize];
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="flex-grow flex flex-col p-6 overflow-y-auto">
+    <div className="flex flex-col">
+      <div className="flex flex-col p-4 md:p-6">
         {/* Benefits */}
-        <div className="flex justify-center space-x-6 mb-8">
+        <div className="flex justify-center space-x-4 md:space-x-6 mb-4 md:mb-8">
           {product.benefits.map((benefit, index) => (
             <div key={index} className="flex items-center space-x-2">
-              <span className="text-xl">{benefit.icon}</span>
-              <span className="text-sm font-medium">{benefit.name}</span>
+              <span className="text-lg md:text-xl">{benefit.icon}</span>
+              <span className="text-xs md:text-sm font-regular">{benefit.name}</span>
             </div>
           ))}
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <div className="space-y-6 order-2 md:order-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+          <div className="space-y-4 md:space-y-6 order-2 md:order-1">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-2" style={{ fontFamily: 'Poppins Light Italic, sans-serif' }}>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
                 {product.displayName}
               </h1>
-              <h2 className="text-xl font-medium mb-2">{product.name}</h2>
+              <h2 className="text-lg md:text-xl font-medium mb-2">{product.name}</h2>
               <p className="text-sm">{product.description}</p>
             </div>
 
@@ -55,12 +57,12 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
               <ProductImageGallery images={product.images.details} productName={product.name} />
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 md:gap-4">
               {Object.keys(product.sizes).map((size) => (
                 <button
                   key={size}
                   onClick={() => setSelectedSize(size)}
-                  className={`px-4 py-2 rounded-full text-sm ${
+                  className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm ${
                     selectedSize === size ? 'bg-black text-white' : `bg-${color}-100/80`
                   }`}
                 >
@@ -70,34 +72,41 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
             </div>
 
             {/* Price and Purchase Options */}
-            <div className="space-y-4">
-              <div className="text-3xl font-bold">
-                ₹{product.sizes[selectedSize].toFixed(2)}
+            <div className="space-y-2 md:space-y-4">
+              <div className="flex items-baseline gap-2">
+                <div className="text-2xl md:text-3xl font-light">
+                  ₹ {discountedPrice || price}
+                </div>
+                {discountedPrice && (
+                  <div className="text-lg md:text-xl line-through text-gray-500">
+                    ₹ {price}
+                  </div>
+                )}
               </div>
               <div>
-                <p className="text-lg font-semibold mb-2">Buy on:</p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <p className="text-base md:text-lg font-semibold mb-2">Buy on:</p>
+                <div className="flex flex-row gap-2 md:gap-4">
                   <button
                     onClick={handleAmazonClick}
-                    className="px-6 py-3 bg-[#FFFFFF] text-black rounded-full flex items-center justify-center space-x-2"
+                    className="flex-1 md:flex-none px-4 py-2 md:px-6 md:py-3 bg-[#FFFFFF] text-black rounded-full flex items-center justify-center space-x-2 md:w-auto"
                   >
-                    <Image src={amazonLogoSrc} width={24} height={24} alt={'Buy Now on Amazon'}/>
-                    <span>Amazon</span>
+                    <Image src={amazonLogoSrc} width={20} height={20} alt={'Buy Now on Amazon'}/>
+                    <span className="text-sm md:text-base">Amazon</span>
                   </button>
                   <button
                     onClick={handleWhatsAppClick}
-                    className="px-6 py-3 bg-[#25D366] text-white rounded-full flex items-center justify-center space-x-2"
+                    className="flex-1 md:flex-none px-4 py-2 md:px-6 md:py-3 bg-[#25D366] text-white rounded-full flex items-center justify-center space-x-2 md:w-auto"
                   >
-                    <Image src={whatsappLogoSrc} width={24} height={24} alt={'Buy Now on Whatsapp'}/>
-                    <span>WhatsApp</span>
+                    <Image src={whatsappLogoSrc} width={20} height={20} alt={'Buy Now on Whatsapp'}/>
+                    <span className="text-sm md:text-base">WhatsApp</span>
                   </button>
                 </div>
               </div>
             </div>
 
             <div>
-              <h2 className="text-lg font-bold mb-2">How to Use</h2>
-              <ul className="list-none text-sm space-y-1">
+              <h2 className="text-base md:text-lg mb-2">How to Use:</h2>
+              <ul className="list-none text-xs md:text-sm space-y-1">
                 {product.guidelines.map((guideline, index) => (
                   <li key={index}>{guideline}</li>
                 ))}
