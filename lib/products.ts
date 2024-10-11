@@ -142,7 +142,7 @@ export const products: Product[] = [
     logo: "/images/lavender/logo.svg",
     amazonUrl: "https://www.amazon.in/dp/B0DJDCR2Y7/",
     slug: "lavender",
-    colorScheme: "#E6E6FA",
+    colorScheme: "#EEEEFC",
     linkColorScheme: "#61398E",
     radiantColor:"#D8BFFF",
     guidelines: [
@@ -184,7 +184,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.in/dp/B0DJDB118W",
     logo: "/images/hibiscus/logo.svg",
     slug: "hibiscus",
-    colorScheme: "#f5dace",
+    colorScheme: "#FBEFEA",
     linkColorScheme: "#dc363d",
     radiantColor:"#F7B293",
     guidelines: [
@@ -226,7 +226,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.in/dp/B0DJD9XBHD",
     logo: "/images/chamomile/logo.svg",
     slug: "chamomile",
-    colorScheme: "#fad264",
+    colorScheme: "#FEF5DC",
     linkColorScheme: "#a56928",
     radiantColor:"#FFC83D",
     guidelines: [
@@ -268,7 +268,7 @@ export const products: Product[] = [
     amazonUrl: "https://www.amazon.in/dp/B0DJD92V93/",
     logo: "/images/butterfly/logo.svg",
     slug: "butterfly",
-    colorScheme: "#c5d8ee",
+    colorScheme: "#EBF2F9",
     linkColorScheme: "#204e96",
     radiantColor:"#A3C7FF",
     guidelines: [
