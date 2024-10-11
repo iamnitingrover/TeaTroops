@@ -3,25 +3,27 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Instagram, Facebook, Twitter, Heart } from 'lucide-react'
-import { usePathname } from 'next/navigation'
-import { getProduct } from '@/lib/products'
+//import { usePathname } from 'next/navigation'
+//import { getProduct } from '@/lib/products'
 
 export function Footer() {
-  const pathname = usePathname()
-  const isProductPage = pathname.startsWith('/product/')
-  const productSlug = isProductPage ? pathname.split('/').pop() : null
-  const product = productSlug ? getProduct(productSlug) : null
-  const footerColor = product ? product.colorScheme : 'white'
-  const logoSrc = product && product.logo ? product.logo : '/logo.svg'
-  const linkColor = product ? product.linkColorScheme : '#00AB6A'
+//  const pathname = usePathname()
+//  const isProductPage = pathname.startsWith('/product/')
+//  const productSlug = isProductPage ? pathname.split('/').pop() : null
+//  const product = productSlug ? getProduct(productSlug) : null
+// const footerColor = product ? product.colorScheme : 'white'
+  const footerColor = 'white'
+//  const logoSrc = product && product.logo ? product.logo : '/logo.svg'
+  const logoSrc = '/logo.svg'
+//  const linkColor = product ? product.linkColorScheme : '#00AB6A'
+  const linkColor = '#00AB6A'
 
   return (
     <footer className="w-full py-8 px-4 md:px-6" style={{ backgroundColor: footerColor }}>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
+        <div className="mb-4">
           <Link href="/" className="flex items-center mb-4">
-          <Image src={logoSrc} alt="Tea Troops Logo" width={64} height={64} className="w-auto h-20 sm:h-16" />
-            {/*<span className="ml-2 text-lg font-bold text-[#00AB6A]">Tea Troops</span>*/}
+            <Image src={logoSrc} alt="Tea Troops Logo" width={64} height={64} className="w-auto h-8 sm:h-10" />
           </Link>
           <p className="text-sm text-gray-600">Premium organic herbal teas for your daily ritual.</p>
         </div>

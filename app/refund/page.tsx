@@ -1,10 +1,10 @@
 export default function RefundPage() {
   return (
     <div className="font-light container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-light mb-6">Cancellation and Refund Policy</h1>
+      <h1 className="text-4xl font-light mb-6">Cancellation and Refund Policy</h1>
       
       <p className="font-light mb-4">
-        We appreciate you selecting Tea Troops. You can contact our Customer Experience Team at help@teatroops.com if you&apos;re not happy 
+        We appreciate you selecting Tea Troops. You can contact our Customer Experience Team at <a href="mailto:help@teatroops.com" className="underline text-blue-600">help@teatroops.com</a> if you&apos;re not happy 
         with your order, and they will get back to you right away.
       </p>
 

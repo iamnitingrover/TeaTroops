@@ -32,16 +32,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col p-4 md:p-6">
-        {/* Benefits */}
-        <div className="flex justify-center space-x-4 md:space-x-6 mb-4 md:mb-8">
-          {product.benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center space-x-2">
-              <span className="text-lg md:text-xl">{benefit.icon}</span>
-              <span className="text-xs md:text-sm font-regular">{benefit.name}</span>
-            </div>
-          ))}
-        </div>
-
+        
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           <div className="space-y-4 md:space-y-6 order-2 md:order-1">
@@ -49,7 +40,16 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
                 {product.displayName}
               </h1>
-              <h2 className="text-lg md:text-xl font-medium mb-2">{product.name}</h2>
+              {/* <h2 className="text-lg md:text-xl font-medium mb-2">{product.name}</h2> */}
+              {/* Benefits */}
+              <div className="flex space-x-4 md:space-x-6 mb-4 md:mb-2">
+                {product.benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <span className="text-lg md:text-xl">{benefit.icon}</span>
+                    <span className="text-xs md:text-sm font-regular">{benefit.name}</span>
+                  </div>
+                ))}
+              </div>
               <p className="text-sm">{product.description}</p>
             </div>
 

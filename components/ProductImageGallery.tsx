@@ -36,21 +36,13 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
 
   return (
     <div className="flex flex-col w-full h-full">
-      <div className="relative w-full h-0 pb-[70%]">
+      <div className="relative w-3/4 mx-auto h-0 pb-[70%]">
         <div
           className="absolute inset-0 overflow-hidden cursor-zoom-in"
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {/* <Image
-            src={images[currentImageIndex]}
-            alt={`${productName} - Image ${currentImageIndex + 1}`}
-            layout="fill"
-            objectFit="contain"
-            className={isZoomed ? 'scale-150' : ''}
-            style={isZoomed ? { transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%` } : {}}
-          /> */}
           <Image
             src={images[currentImageIndex]}
             alt={`${productName} - Image ${currentImageIndex + 1}`}
@@ -86,13 +78,6 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
               index === currentImageIndex ? 'border-black' : 'border-transparent'
             }`}
           >
-            {/* <Image
-              src={image}
-              alt={`${productName} - Thumbnail ${index + 1}`}
-              width={64}
-              height={64}
-              objectFit="cover"
-            /> */}
             <Image
               src={image}
               alt={`${productName} - Thumbnail ${index + 1}`}

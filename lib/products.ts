@@ -117,7 +117,7 @@ export const whatsappNumber = process.env.WHATSAPP_NUMBER;
 export const products: Product[] = [
   {
     id: "1",
-    name: "Himalayan Lavender Premium Herbal Tea",
+    name: "Lavender Premium Herbal Tea",
     displayName: "Lavender",
     description: "A soothing blend to calm your senses. This aromatic tea combines the gentle notes of lavender with a hint of chamomile, creating a perfect harmony that helps you unwind after a long day.",
     shortDescription: "A soothing blend to calm your senses",
@@ -151,14 +151,14 @@ export const products: Product[] = [
       "Can be served hot or iced"
     ],
     benefits: [
-      { name: "Helps with Anxiety", icon: "🍃" },
-      { name: "Depression", icon: "🌙" },
-      { name: "Restore Hair Loss", icon: "🌙" }
+      { name: "Calm", icon: "🌸" },
+      { name: "Depression", icon: "🌞" },
+      { name: "Sleep", icon: "😴" }
     ]
   },
   {
     id: "2",
-    name: "Himalayan Hibiscus Premium Herbal Tea",
+    name: "Hibiscus Premium Herbal Tea",
     displayName: "Hibiscus",
     description: "A vibrant fusion of orange and lemon with a hint of ginger, this tea is perfect for a refreshing pick-me-up. Enjoy its invigorating flavor any time of the day.",
     shortDescription: "A vibrant fusion of orange and lemon",
@@ -193,14 +193,14 @@ export const products: Product[] = [
       "Add honey for extra sweetness"
     ],
     benefits: [
-      { name: "Antioxidants", icon: "⚡" },
-      { name: "Lowers BP", icon: "💪" },
-      { name: "Glowing Skin", icon: "💪" }
+      { name: "Antioxidants", icon: "🌿" },
+      { name: "Lowers BP", icon: "❤️" },
+      { name: "Glowing Skin", icon: "✨" }
     ]
   },
   {
     id: "3",
-    name: "Himalayan Chamomile Premium Herbal Tea",
+    name: "Chamomile Premium Herbal Tea",
     displayName: "Chamomile",
     description: "Experience a refreshing burst of peppermint and spearmint in this revitalizing tea. Perfect for cooling down on a hot day or invigorating your senses.",
     shortDescription: "Refreshing burst of peppermint and spearmint",
@@ -235,8 +235,8 @@ export const products: Product[] = [
       "Perfect after meals for digestion"
     ],
     benefits: [
-      { name: "Sleep", icon: "💧" },
-      { name: "Relaxation", icon: "🍵" }
+      { name: "Sleep", icon: "😴" },
+      { name: "Relaxation", icon: "🧘‍♀️" }
     ]
   },
   {
@@ -277,8 +277,8 @@ export const products: Product[] = [
       "Add sugar or honey to taste"
     ],
     benefits: [
-      { name: "Antioxidants", icon: "🔥" },
-      { name: "Anti-Ageing", icon: "🌶️" }
+      { name: "Antioxidants", icon: "🌿" },
+      { name: "Anti-Ageing", icon: "🌟" }
     ]
   },
   {
@@ -306,7 +306,7 @@ export const products: Product[] = [
     },
     amazonUrl: "https://www.amazon.in/dp/B0DJDCDJW4",
     slug: "butterfly-hibiscus",
-    colorScheme: "#FF69B4",
+    colorScheme: "#f0f9f6",
     linkColorScheme: "#000000",
     radiantColor:"#ffffff",
     guidelines: [
@@ -315,8 +315,8 @@ export const products: Product[] = [
       "Perfect for kids and adults alike"
     ],
     benefits: [
-      { name: "Refresh", icon: "🍓" },
-      { name: "Antioxidants", icon: "🛡️" }
+      { name: "Refresh", icon: "🍃" },
+      { name: "Antioxidants", icon: "💧" }
     ]
   },
   {
@@ -344,7 +344,7 @@ export const products: Product[] = [
     },
     amazonUrl: "https://www.amazon.in/dp/B0DJDD74BG",
     slug: "butterfly-chamomile",
-    colorScheme: "#8FBC8F",
+    colorScheme: "#f0f9f6",
     linkColorScheme: "#000000",
     radiantColor:"#ffffff",
     guidelines: [
@@ -353,7 +353,7 @@ export const products: Product[] = [
       "Great for afternoon breaks"
     ],
     benefits: [
-      { name: "Calm", icon: "🌿" },
+      { name: "Calm", icon: "🌸" },
       { name: "Focus", icon: "🧘" }
     ]
   }

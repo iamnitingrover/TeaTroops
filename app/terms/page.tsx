@@ -1,16 +1,15 @@
 export default function TermsPage() {
   return (
     <div className="container font-light mx-auto px-4 py-8">
-      <h1 className="text-3xl font-light mb-6">Terms and Conditions</h1>
+      <h1 className="text-4xl font-light mb-6">Terms and Conditions</h1>
       
       <p className="font-light mb-4">
-        These terms and conditions are applicable to all products we sell on our website, 
-        <a href="https://www.teatroops.com" className="underline text-blue-600">www.teatroops.com</a>. Note that by using any of our products, you consent to be bound by 
-        these terms and conditions.
+        These terms and conditions are applicable to all products we sell on our website, <a href="https://www.teatroops.com" className="underline text-blue-600">www.teatroops.com</a>. 
+        Note that by using any of our products, you consent to be bound by these terms and conditions.
       </p>
 
       <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">OVERVIEW</h2>
+        <h2 className="text-2xl font-light mb-3">Overview</h2>
         <p>
           Pahari Brothers runs the website <a href="https://www.teatroops.com" className="underline text-blue-600">www.teatroops.com</a>. Its registered office is located at C-54, 
           Khasra no 17/3/3, Gali Number 7, Ambedkar Vihar, Gokalpuri, North East Delhi, Delhi-
@@ -21,7 +20,7 @@ export default function TermsPage() {
       </section>
 
       <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">ORDERING AND DISPATCH</h2>
+        <h2 className="text-2xl font-light mb-3">Ordering and Dispatch</h2>
         <p>
           You have the option to place product orders over the phone or through our website. We will 
           give you an order confirmation as soon as we receive your order, which is our way of saying 
@@ -43,7 +42,7 @@ export default function TermsPage() {
       {/* Add more sections as needed */}
 
       <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">VARIATIONS IN THE TERMS AND CONDITIONS</h2>
+        <h2 className="text-2xl font-light mb-3">Variations in the Terms and Conditions</h2>
         <p>
           We retain the right, at any time, to modify the terms and conditions listed above in order to 
           reflect changes in the law or in our policies and capabilities.
