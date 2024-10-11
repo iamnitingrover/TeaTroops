@@ -12,11 +12,10 @@ const landscapeImages: LandscapeCarouselImage[] = [
 ]
 
 const portraitImages: PortraitCarouselImage[] = [
-  { id: 1, portraitUrl: "/images/carousel/portrait/4.webp", link: "/product/lavender" },
-  { id: 2, portraitUrl: "/images/carousel/portrait/1.webp", link: "/product/blueflower" },
+  { id: 1, portraitUrl: "/images/carousel/portrait/1.webp", link: "/product/lavender" },
+  { id: 2, portraitUrl: "/images/carousel/portrait/2.webp", link: "/product/blueflower" },
   { id: 3, portraitUrl: "/images/carousel/portrait/3.webp", link: "/product/hibiscus" },
-  { id: 4, portraitUrl: "/images/carousel/portrait/2.webp", link: "/product/chamomile" },
-  { id: 5, portraitUrl: "/images/carousel/portrait/5.webp", link: "/product/butterfly" },
+  { id: 4, portraitUrl: "/images/carousel/portrait/4.webp", link: "/product/chamomile" },
   // Add more portrait images as needed
 ]
 
