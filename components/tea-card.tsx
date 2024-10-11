@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Product } from "@/lib/products"
 
-export function TeaCard({ name, displayName, shortDescription, sizes, images, slug }: Product) {
+export function TeaCard({ name, displayName, sizes, images, benefits, slug }: Product) {
   const smallestSize = Object.keys(sizes)[0];
   const { price, discountedPrice } = sizes[smallestSize];
 
@@ -12,7 +12,18 @@ export function TeaCard({ name, displayName, shortDescription, sizes, images, sl
       <Card className="h-full flex flex-col transition-shadow hover:shadow-lg border-[#00AB6A] border-opacity-20">
         <CardHeader className="flex-grow">
           <CardTitle className="font-semibold text-[#00AB6A]">{displayName}</CardTitle>
-          <CardDescription className="line-clamp-2">{shortDescription}</CardDescription>
+          {/* <CardDescription className="line-clamp-2">{shortDescription}</CardDescription> */}
+          <CardDescription className="line-clamp-2">
+            {/* Benefits */}
+          {/* <div className="flex space-x-2 md:space-x-4 mb-2 md:mb-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <span className="text-xs md:text-xs">{benefit.icon}</span>
+                <span className="text-xs md:text-xs font-light">{benefit.name}</span>
+              </div>
+            ))}
+          </div> */}
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <Image

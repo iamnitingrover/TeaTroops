@@ -1,9 +1,9 @@
 export default function ShippingPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-light mb-6">Shipping Policy</h1>
+      <h1 className="text-4xl font-light mb-6">Shipping Policy</h1>
       <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">1. SHIPPING GUIDELINES AND TIMES</h2>
+        <h2 className="text-2xl font-light mb-3">Shipping Guidelines and Times</h2>
         <ul className="list-disc font-light pl-5 space-y-2">
           <li>For every order, we provide regular delivery services.</li>
           <li>Orders are shipped out in one to two business days after processing.</li>
@@ -14,7 +14,7 @@ export default function ShippingPage() {
         </ul>
       </section>
       <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">2. Assistance with Shipping</h2>
+        <h2 className="text-2xl font-light mb-3">Assistance with Shipping</h2>
         <p>
           Please email our customer support staff at <a href="mailto:help@teatroops.com" className="underline text-blue-600">help@teatroops.com</a> or message at tea 
           troops customer care number if you have any questions or need assistance with your 
@@ -23,7 +23,7 @@ export default function ShippingPage() {
       </section>
 
       <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">3. SHIPPING RATES</h2>
+        <h2 className="text-2xl font-light mb-3">Shipping Rates</h2>
         <p>
           The weight of your order and your location are used to determine the shipping rates 
           and orders over a specific amount qualify for free shipping.

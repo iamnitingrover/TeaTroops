@@ -67,6 +67,14 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #f0f9f6; /* Replace with your desired background color */
+  /* Or use a background image */
+  /* background-image: url('/path/to/image.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+}
+
 /* Theme Configuration */
 @layer base {
   :root {

@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
-      <h1 className="text-5xl font-light text-center mb-8">ABOUT US</h1>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
         {/* Left column (desktop only) */}
         <div className="hidden md:block relative">
@@ -36,6 +35,7 @@ export default function AboutUs() {
           </div>
 
           <section>
+            <h1 className="text-4xl font-light text-left mb-8">ABOUT US</h1>
             <h2 className="text-3xl font-light mb-4">Welcome to Tea Troops!</h2>
             <p className="font-light mb-4">
               We are a small business based in Delhi, India. My family roots are from Uttarakhand and we came to Delhi before I was born. Landscape around me had in progress construction work and busy roads, so a void always existed. When we visited my uncle in our village, he made me taste different herbs it helped me develop a taste and moreover now I value this treasure more than ever. Interestingly I developed this habit to serve this to friend&apos;s n family at breakfast. Though I&apos;m one of those who also sometimes enjoys milk in my tea but these herbal cups have helped my family especially my parents reduce their daily caffeine tea intake. That is the beauty of tea and mind it enjoying tea with wonderful company exaggerates its flavours.

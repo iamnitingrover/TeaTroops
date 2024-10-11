@@ -1,7 +1,7 @@
 export default function PrivacyPage() {
   return (
-    <div className="container font-light mx-auto px-4 py-8">
-      <h1 className="text-3xl font-light mb-6">Privacy Policy</h1>
+    <div className="container font-light mx-auto px-4 py-8 bg-[#f0f9f6]">
+      <h1 className="text-4xl font-light mb-6">Privacy Policy</h1>
       
       <p className="font-light mb-4">
         Tea Troops places the utmost attention on our guest&apos;s privacy and safety. This policy outlines 
@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       </p>
 
       <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">Information Gathered from You</h2>
+        <h2 className="text-2xl font-light mb-3">Information gathered from you</h2>
         <p>
           Information that you submit by completing forms on our website, www.teatroops.com, such 
           as those for purchases or registration, may be gathered and processed by us about you. When 
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
       {/* Add more sections as needed */}
 
       <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">COMMUNICATION</h2>
+        <h2 className="text-2xl font-light mb-3">Communication</h2>
         <p>
           We encourage your feedback and concerns regarding this privacy policy, which can be sent 
           to <a href="mailto:help@teatroops.com" className="underline text-blue-600">help@teatroops.com</a>.

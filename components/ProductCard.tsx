@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Product } from '@/lib/products'
 
 interface ProductCardProps {
@@ -29,18 +29,20 @@ export default function ProductCard({ product }: ProductCardProps) {
     <Link href={`/product/${product.slug}`}>
       <Card className="cursor-pointer transition-shadow hover:shadow-lg h-full flex flex-col">
         <CardHeader className="pb-0">
-          <CardTitle className="text-lg">{product.displayName}</CardTitle>
-          <CardDescription className="text-sm">{product.shortDescription}</CardDescription>
+          <CardTitle className="text-2xl font-light" style={{color:'#00AB6A'}}>{product.displayName}</CardTitle>
+          {/* <CardDescription className="text-sm">{product.shortDescription}</CardDescription> */}
+          {/* Benefits */}
+          <div className="flex space-x-4 md:space-x-6 mb-4 md:mb-8">
+            {product.benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <span className="text-lg md:text-sm">{benefit.icon}</span>
+                <span className="text-xs md:text-sm font-light">{benefit.name}</span>
+              </div>
+            ))}
+          </div>
         </CardHeader>
         <CardContent className="pt-4 flex-grow flex flex-col">
           <div className="relative w-full pt-[75%] mb-4 flex-grow">
-            {/* <Image
-              src={product.images.card}
-              alt={product.name}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-md"
-            /> */}
             <Image
               src={product.images.card}
               alt={product.name}
@@ -50,11 +52,12 @@ export default function ProductCard({ product }: ProductCardProps) {
             />
           </div>
           <div className="flex items-baseline gap-2">
-            <p className="text-lg font-light">₹{discountedPrice || price}</p>
+            <p className="text-lg font-light" style={{color:'#00AB6A'}}>₹ {discountedPrice || price}</p>
             {discountedPrice && (
               <p className="text-sm line-through text-gray-500">₹{price}</p>
             )}
           </div>
+          {/* Add Buy Button here that takes to respective */}
         </CardContent>
       </Card>
     </Link>
