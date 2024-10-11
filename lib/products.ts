@@ -112,7 +112,8 @@ export interface Product {
   logo?: string;
 }
 
-export const whatsappNumber = process.env.WHATSAPP_NUMBER;
+export const whatsAppNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+//export const whatsAppNumber = "919999999999";
 
 export const products: Product[] = [
   {

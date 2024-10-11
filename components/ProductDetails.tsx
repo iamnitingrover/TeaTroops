@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Product, whatsappNumber } from '@/lib/products'
+import { Product, whatsAppNumber } from '@/lib/products'
 import { ProductImageGallery } from './ProductImageGallery'
 
 interface ProductDetailsProps {
@@ -21,7 +21,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(`Hi, I'm interested in buying ${product.name} (${selectedSize}).`)
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank')
+    window.open(`https://wa.me/${whatsAppNumber}?text=${message}`, '_blank')
   }
 
   const color = product.colorScheme;
