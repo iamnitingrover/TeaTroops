@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Product } from "@/lib/products"
 
-export function TeaCard({ name, displayName, sizes, images, benefits, slug }: Product) {
+export function TeaCard({ name, displayName, sizes, images, slug }: Product) {
   const smallestSize = Object.keys(sizes)[0];
   const { price, discountedPrice } = sizes[smallestSize];
 
