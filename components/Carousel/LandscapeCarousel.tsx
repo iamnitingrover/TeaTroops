@@ -12,6 +12,7 @@ export function LandscapeCarousel({ images }: LandscapeCarouselProps) {
     <BaseCarousel
       images={images}
       getImageUrl={(image) => image.landscapeUrl}
+      getImageLink={(image) => image.link}
     />
   )
 }

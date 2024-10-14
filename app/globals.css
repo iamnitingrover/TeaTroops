@@ -3,19 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Lato Font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Import Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap');
 
 /* Base Font Settings */
 @layer base {
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400; /* Regular */
   }
 
-  h1, h2, h3 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300; /* Light */
+  h1, h2, h3, h4, h5, h6, strong {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
   }
 }
 
@@ -129,13 +129,5 @@ body {
 @layer base {
   * {
     @apply border-border;
-  }
-  
-  body {
-    @apply bg-background text-foreground;
-  }
-  
-  h1, h2, h3, h4, h5, h6, strong {
-    @apply font-bold;
   }
 }

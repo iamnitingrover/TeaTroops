@@ -12,6 +12,7 @@ export function PortraitCarousel({ images }: PortraitCarouselProps) {
     <BaseCarousel
       images={images}
       getImageUrl={(image) => image.portraitUrl}
+      getImageLink={(image) => image.link}
     />
   )
 }

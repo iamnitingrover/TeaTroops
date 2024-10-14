@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Home, ShoppingBag } from 'lucide-react'
+import { Home, ShoppingCart } from 'lucide-react'
 import { Ticker } from './Ticker'
 
 export function Header() {
@@ -24,7 +24,7 @@ export function Header() {
           </Link>
           <Link className="text-lg font-medium hover:underline underline-offset-4" aria-label="Shop" style={{ color: linkColor }} href="/shop">
             <span className="hidden sm:inline">Shop</span>
-            <ShoppingBag className="sm:hidden" size={24} />
+            <ShoppingCart className="sm:hidden" size={24} />
           </Link>
           <Link className="text-lg font-medium hover:underline underline-offset-4 hidden sm:inline-block" aria-label="About" style={{ color: linkColor }} href="/about">
             About

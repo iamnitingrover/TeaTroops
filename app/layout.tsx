@@ -45,7 +45,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        <div className="flex flex-col min-h-screen ">
+        <div className="font-sans flex flex-col min-h-screen ">
           <Header />
           <main className="flex-grow flex flex-col">
             {children}

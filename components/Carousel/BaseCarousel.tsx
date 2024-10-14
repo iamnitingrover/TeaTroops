@@ -1,5 +1,3 @@
-// components/Carousel/BaseCarousel.tsx
-
 import { useState, useEffect, useRef } from 'react'
 import Link from "next/link"
 import Image from "next/image"
@@ -9,9 +7,14 @@ import { BaseCarouselImage } from '@/types/carousel'
 interface BaseCarouselProps<T extends BaseCarouselImage> {
   images: T[];
   getImageUrl: (image: T) => string;
+  getImageLink: (image: T) => string;
 }
 
-export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl }: BaseCarouselProps<T>) {
+export function BaseCarousel<T extends BaseCarouselImage>({ 
+  images, 
+  getImageUrl,
+  getImageLink
+}: BaseCarouselProps<T>) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [carouselHeight, setCarouselHeight] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
@@ -48,30 +51,27 @@ export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl 
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
   }
 
+  const currentImage = images[currentImageIndex]
+
   return (
     <section       
       ref={carouselRef} 
       className="relative w-full overflow-hidden"
       style={{ height: `${carouselHeight}px` }}
     >
-      {images.map((image, index) => (
-        <Link
-          key={image.id}
-          href={image.link}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <Image
-            src={getImageUrl(image)}
-            alt={`Carousel image ${image.id}`}
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-          />
-        </Link>
-      ))}
+      <Link
+        href={getImageLink(currentImage)}
+        className="block absolute inset-0"
+      >
+        <Image
+          src={getImageUrl(currentImage)}
+          alt={`Carousel image ${currentImage.id}`}
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+        />
+      </Link>
       <button
         onClick={prevImage}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
