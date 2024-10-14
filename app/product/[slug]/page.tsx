@@ -57,7 +57,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
   }
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: product.colorScheme }}>
+    <div className="flex flex-col" style={{ backgroundColor: product.colorScheme }}>
       <div className="flex-grow">
         <Suspense fallback={<div>Loading...</div>}>
           <ProductDetails product={product} />

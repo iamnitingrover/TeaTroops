@@ -113,14 +113,13 @@ export interface Product {
 }
 
 export const whatsAppNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-//export const whatsAppNumber = "919999999999";
 
 export const products: Product[] = [
   {
     id: "1",
     name: "Lavender Premium Herbal Tea",
     displayName: "Lavender",
-    description: "A soothing blend to calm your senses. This aromatic tea combines the gentle notes of lavender with a hint of chamomile, creating a perfect harmony that helps you unwind after a long day.",
+    description: "This versatile herb stands out among the wonders of Ayurveda. As a natural remedy that not only soothes the mind, but also supports skin health, respiratory and even cognitive functions.",
     shortDescription: "A soothing blend to calm your senses",
     sizes: {
       "40g": { price: 599, discountedPrice: 349 }
@@ -161,7 +160,7 @@ export const products: Product[] = [
     id: "2",
     name: "Hibiscus Premium Herbal Tea",
     displayName: "Hibiscus",
-    description: "A vibrant fusion of orange and lemon with a hint of ginger, this tea is perfect for a refreshing pick-me-up. Enjoy its invigorating flavor any time of the day.",
+    description: "Known for its deep red colour. It is tangy, slightly sweet in taste. Hibiscus tea is popular for its potential health benefits. It has antioxidants that can help lower blood sugar levels, cholesterol, blood pressure, maintain hormone balance and aid weight management.",
     shortDescription: "A vibrant fusion of orange and lemon",
     sizes: {
       "50g": { price: 299, discountedPrice: 185 }
@@ -203,7 +202,7 @@ export const products: Product[] = [
     id: "3",
     name: "Chamomile Premium Herbal Tea",
     displayName: "Chamomile",
-    description: "Experience a refreshing burst of peppermint and spearmint in this revitalizing tea. Perfect for cooling down on a hot day or invigorating your senses.",
+    description: "A soothing herbal tea made from the dried flowers of the chamomile plant, it’s well-loved for its gentle, floral flavour and calming qualities. Many swear by a cup of chamomile tea before bed for help with sleep, relaxation with its anti-inflammatory and antioxidant properties an added benefit.",
     shortDescription: "Refreshing burst of peppermint and spearmint",
     sizes: {
       "30g": { price: 299, discountedPrice: 185 }
@@ -244,7 +243,7 @@ export const products: Product[] = [
     id: "4",
     name: "Butterfly Pea Flower Premium Herbal Tea",
     displayName: "Butterfly Pea Flower",
-    description: "Indulge in the warm spices of cinnamon, cardamom, and cloves blended with black tea. This chai is perfect for those who enjoy a robust flavor profile.",
+    description: "Rich in antioxidants, Butterfly Pea Flower holds several health benefits, including weight loss, blood sugar control, good hair and skin health. It has traditionally been used to aid, boost memory and cognitive functions.",
     shortDescription: "Warm spices blended with black tea",
     sizes: {
       "30g": { price: 399, discountedPrice: 275 }
@@ -286,7 +285,7 @@ export const products: Product[] = [
     id: "5",
     name: "Butterfly Pea Flower & Hibiscus Premium Herbal Tea",
     displayName: "Butterfly Pea Flower & Hibiscus",
-    description: "A delightful blend of berries, including raspberry and blueberry, for a fruity and sweet experience. This tea is perfect for brightening your day.",
+    description: "Butterfly Pea Flower : Rich in antioxidants, Butterfly Pea Flower holds several health benefits, including weight loss, blood sugar control, good hair and skin health. It has traditionally been used to aid, boost memory and cognitive functions. Hibiscus : Known for its deep red colour. It is tangy, slightly sweet in taste. Hibiscus tea is popular for its potential health benefits. It has antioxidants that can help lower blood sugar levels, cholesterol, blood pressure, maintain hormone balance and aid weight management.",
     shortDescription: "Fruity and sweet berry blend",
     sizes: {
       "80g": { price: 689, discountedPrice: 399 }
@@ -324,7 +323,7 @@ export const products: Product[] = [
     id: "6",
     name: "Butterfly Pea Flower & Chamomile",
     displayName: "Butterfly Pea Flower & Chamomile",
-    description: "A calming blend of green tea with jasmine and a hint of mint. This tea promotes relaxation and well-being, making it a perfect choice for mindfulness.",
+    description: "Butterfly Pea Flower : Rich in antioxidants, Butterfly Pea Flower holds several health benefits, including weight loss, blood sugar control, good hair and skin health. It has traditionally been used to aid, boost memory and cognitive functions. Chamomile : A soothing herbal tea made from the dried flowers of the chamomile plant, it’s well-loved for its gentle, floral flavour and calming qualities. Many swear by a cup of chamomile tea before bed for help with sleep, relaxation with its anti-inflammatory and antioxidant properties an added benefit.",
     shortDescription: "Calming blend of green tea and jasmine",
     sizes: {
       "60g": { price: 698, discountedPrice: 425 }

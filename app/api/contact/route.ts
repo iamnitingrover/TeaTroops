@@ -29,15 +29,15 @@ export async function POST(request: Request) {
   const mailType = formData.get('mailType')
   const message = formData.get('message')
   const file = formData.get('file') as File | null
-  const supportEmail = process.env.SUPPORT_EMAIL;
+  const supportEmail = process.env.NEXT_PUBLIC_SUPPORT_EMAIL;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
     secure: false,
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
+      user: process.env.NEXT_PUBLIC_EMAIL_USER,
+      pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
     },
   })
 
