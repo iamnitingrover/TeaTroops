@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
-import { ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
+import React, { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
+import { FiChevronUp, FiChevronDown, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 interface ProductImageGalleryProps {
   images: string[];
@@ -17,7 +17,13 @@ interface ThumbnailScrollerProps {
   productName: string;
 }
 
-const ThumbnailScroller = ({ images, currentIndex, onSelect, direction, productName }: ThumbnailScrollerProps) => {
+const ThumbnailScroller: React.FC<ThumbnailScrollerProps> = ({
+  images,
+  currentIndex,
+  onSelect,
+  direction,
+  productName,
+}) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showScrollButtons, setShowScrollButtons] = useState(false);
 
@@ -48,31 +54,37 @@ const ThumbnailScroller = ({ images, currentIndex, onSelect, direction, productN
     }
   };
 
+  const renderScrollButtons = () => {
+    if (!showScrollButtons) return null;
+
+    if (direction === 'vertical') {
+      return (
+        <>
+          <button onClick={() => scroll('up')} className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
+            <FiChevronUp className="w-4 h-4" />
+          </button>
+          <button onClick={() => scroll('down')} className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
+            <FiChevronDown className="w-4 h-4" />
+          </button>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
+            <FiChevronLeft className="w-4 h-4" />
+          </button>
+          <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
+            <FiChevronRight className="w-4 h-4" />
+          </button>
+        </>
+      );
+    }
+  };
+
   return (
     <div className={`relative ${direction === 'vertical' ? 'h-full' : 'w-full'}`}>
-      {showScrollButtons && (
-        <>
-          {direction === 'vertical' ? (
-            <>
-              <button onClick={() => scroll('up')} className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
-                <ChevronUp className="w-4 h-4" />
-              </button>
-              <button onClick={() => scroll('down')} className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
-                <ChevronDown className="w-4 h-4" />
-              </button>
-            </>
-          ) : (
-            <>
-              <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </>
-          )}
-        </>
-      )}
+      {renderScrollButtons()}
       <div 
         ref={scrollRef} 
         className={`overflow-auto scrollbar-hide ${direction === 'vertical' ? 'flex-col h-full py-4 px-2' : 'flex-row w-full px-4 py-2'} flex`}
@@ -136,3 +148,5 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
     </div>
   )
 }
+
+export default ThumbnailScroller;
