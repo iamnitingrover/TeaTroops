@@ -2,46 +2,30 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Product } from '@/lib/products'
+import { ShoppingCart } from 'lucide-react'
 
 interface ProductCardProps {
   product: Product
 }
 
-/**
- * Component that renders a product card with a link to the product's page.
- * 
- * @component
- * @param {ProductCardProps} props - The properties object.
- * @param {Object} props.product - The product object to display.
- * @param {string} props.product.slug - The slug of the product used in the URL.
- * @param {string} props.product.displayName - The display name of the product.
- * @param {string} props.product.shortDescription - A short description of the product.
- * @param {Object} props.product.images - The images object of the product.
- * @param {string} props.product.images.card - The URL of the product's card image.
- * @param {string} props.product.name - The name of the product.
- * @param {Object} props.product.sizes - The sizes object of the product.
- * @returns {JSX.Element} The rendered product card component.
- */
 export default function ProductCard({ product }: ProductCardProps) {
   const firstSize = Object.keys(product.sizes)[0];
   const { price, discountedPrice } = product.sizes[firstSize];
   return (
-    <Link href={`/product/${product.slug}`}>
-      <Card className="cursor-pointer transition-shadow hover:shadow-lg h-full flex flex-col">
+    <Card className="cursor-pointer transition-shadow hover:shadow-lg h-full flex flex-col relative">
+      <Link href={`/product/${product.slug}`}>
         <CardHeader className="pb-0">
-          <CardTitle className="text-2xl font-light" style={{color:'#00AB6A'}}>{product.displayName}</CardTitle>
-          {/* <CardDescription className="text-sm">{product.shortDescription}</CardDescription> */}
-          {/* Benefits */}
-          <div className="flex space-x-4 md:space-x-6 mb-4 md:mb-8">
+          <CardTitle className="text-xl sm:text-2xl font-light" style={{color:'#00AB6A'}}>{product.displayName}</CardTitle>
+          <div className="flex flex-wrap gap-2 sm:gap-4 mb-2 sm:mb-4">
             {product.benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-2">
-                <span className="text-lg md:text-sm">{benefit.icon}</span>
-                <span className="text-xs md:text-sm font-light">{benefit.name}</span>
+              <div key={index} className="flex items-center space-x-1 sm:space-x-2">
+                <span className="text-base sm:text-lg">{benefit.icon}</span>
+                <span className="text-xs sm:text-sm font-light">{benefit.name}</span>
               </div>
             ))}
           </div>
         </CardHeader>
-        <CardContent className="pt-4 flex-grow flex flex-col">
+        <CardContent className="pt-2 sm:pt-4 flex-grow flex flex-col">
           <div className="relative w-full pt-[75%] mb-4 flex-grow">
             <Image
               src={product.images.card}
@@ -52,14 +36,20 @@ export default function ProductCard({ product }: ProductCardProps) {
             />
           </div>
           <div className="flex items-baseline gap-2">
-            <p className="text-lg font-light" style={{color:'#00AB6A'}}>₹ {discountedPrice || price}</p>
+            <p className="text-base sm:text-lg font-light" style={{color:'#00AB6A'}}>₹ {discountedPrice || price}</p>
             {discountedPrice && (
               <p className="text-sm line-through text-gray-500">₹{price}</p>
             )}
           </div>
-          {/* Add Buy Button here that takes to respective */}
         </CardContent>
-      </Card>
-    </Link>
+      </Link>
+      <Link 
+        href={`/product/${product.slug}`}
+        className="absolute bottom-6 right-6 bg-[#00AB6A] text-white p-2 rounded-full hover:bg-[#008c56] transition-colors"
+        aria-label={`View ${product.name}`}
+      >
+        <ShoppingCart size={16} />
+      </Link>
+    </Card>
   )
 }

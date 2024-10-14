@@ -39,8 +39,31 @@ export default function TermsPage() {
         </p>
       </section>
 
-      {/* Add more sections as needed */}
+      <section className="font-light mb-6">
+        <h2 className="text-2xl font-light mb-3">Prices</h2>
+        <p>
+        The prices on our website are all subject to change, but they won&apos;t have an impact on orders that we have already accepted. Shipping and VAT are not included in the prices listed on our website; these will be added at the time of checkout. Our website lists the carefully calculated prices of our products. But if the goods you bought has been priced wrongly owing to inadvertent mistakes, we will let you know by phone or email before we accept your order so you can get the proper information. At that point, you can choose to pay the difference or cancel your order if you&apos;d like. Prior to dispatch, all payments must be paid using UPI.
+        </p>
+      </section>
+      
+      <section className="font-light mb-6">
+        <h2 className="text-2xl font-light mb-3">Delivery</h2>
+        <p>
+        All retail orders received by 12 p.m. IST or earlier are typically shipped the following business day. Order processing; however, may take up to five business days in unusual cases.
+        After payment has been cleared, we try to ship out the products within 24 hours, and we strive to deliver all orders to consumers in India in 5-7 working days. If a product isn&apos;t available, we&apos;ll let you know and ship it as soon as it becomes available again.
+        You can find out about delivery costs and details on our Shipping & Delivery Page.
+        </p>
+      </section>
+      
+      <section className="font-light mb-6">
+        <h2 className="text-2xl font-light mb-3">Shelf Life and Storage Conditions</h2>
+        <p>
+          The tea we offer is good for 24 months after purchase. We are able to achieve such a long shelf life because of our superior vacuum technique and packing materials. Please take into account the storage conditions for tea in order to fully appreciate its extended shelf life. Tea should be kept in airtight containers away from heat, moisture, and odors from food. It needs to be kept somewhere dry and cool. Since freezing can shorten the tea&apos;s shelf life, we do not advise it.
+        </p>
+      </section>
 
+      {/* Add more sections as needed */}
+      
       <section className="font-light mb-6">
         <h2 className="text-2xl font-light mb-3">Variations in the Terms and Conditions</h2>
         <p>

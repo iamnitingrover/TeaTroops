@@ -26,8 +26,8 @@ const config = {
     extend: {
       // Font family configurations
       fontFamily: {
-        // Using Lato as the primary font
-        nohemi: ['Lato', 'sans-serif'],
+        // Using Montserrat as the primary font
+        sans: ['Montserrat', 'sans-serif'],
       },
       
       // Color configurations
