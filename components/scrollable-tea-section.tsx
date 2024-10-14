@@ -1,9 +1,9 @@
 "use client"
 
-import { TeaCard } from "@/components/tea-card"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useRef } from 'react'
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Product } from "@/lib/products"
+import ProductCard from "./ProductCard"
 
 interface ScrollableTeaSectionProps {
   teas: Product[];
@@ -25,7 +25,7 @@ export function ScrollableTeaSection({ teas }: ScrollableTeaSectionProps) {
         <div className="inline-flex space-x-6 p-4">
           {teas.map((tea) => (
             <div key={tea.slug} className="w-80 flex-shrink-0 font-light">
-              <TeaCard {...tea} />
+              <ProductCard product={tea} />
             </div>
           ))}
         </div>

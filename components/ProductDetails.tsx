@@ -34,7 +34,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
       <div className="flex flex-col p-4 md:p-6">
         
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 md:pl-6 lg:pl-8">
           <div className="space-y-4 md:space-y-6 order-2 md:order-1">
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
@@ -54,7 +54,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
             </div>
 
             <div className="md:hidden">
-              <ProductImageGallery images={product.images.details} productName={product.name} />
+              <ProductImageGallery images={product.images.details} productName={product.name}/>
             </div>
 
             <div className="flex flex-wrap gap-2 md:gap-4">
