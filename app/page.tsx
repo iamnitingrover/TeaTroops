@@ -24,7 +24,7 @@ export default async function Home() {
       <section>
         <Carousel />
       </section>
-      <section className="bg-[#f0f9f6]">
+      <section>
         <div className="container mx-auto px-4 md:px-6 py-12">
           <h2 className="text-2xl tracking-tighter font-light sm:text-4xl text-center mb-12 text-[#00AB6A]">Our Caffeine Free Teas</h2>
           <ScrollableTeaSection teas={products} />
