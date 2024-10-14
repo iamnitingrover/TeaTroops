@@ -14,15 +14,6 @@ export function TeaCard({ name, displayName, sizes, images, slug }: Product) {
           <CardTitle className="font-semibold text-[#00AB6A]">{displayName}</CardTitle>
           {/* <CardDescription className="line-clamp-2">{shortDescription}</CardDescription> */}
           <CardDescription className="line-clamp-2">
-            {/* Benefits */}
-          {/* <div className="flex space-x-2 md:space-x-4 mb-2 md:mb-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-2">
-                <span className="text-xs md:text-xs">{benefit.icon}</span>
-                <span className="text-xs md:text-xs font-light">{benefit.name}</span>
-              </div>
-            ))}
-          </div> */}
           </CardDescription>
         </CardHeader>
         <CardContent>

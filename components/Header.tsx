@@ -2,21 +2,13 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-//import { usePathname } from 'next/navigation'
-//import { getProduct } from '@/lib/products'
+import { Home, ShoppingBag } from 'lucide-react'
 import { Ticker } from './Ticker'
 
 export function Header() {
-  //const pathname = usePathname()
-  //const isProductPage = pathname.startsWith('/product/')
-  //const productSlug = isProductPage ? pathname.split('/').pop() : null
-  //const product = productSlug ? getProduct(productSlug) : null
   const headerColor = 'white'
-  //const headerColor = product ? product.colorScheme : 'white'
   const logoSrc = '/logo.svg'
-  //const logoSrc = product && product.logo ? product.logo : '/logo.svg'
   const linkColor = '#00AB6A'
-  //const linkColor = product ? product.linkColorScheme : '#00AB6A'
 
   return (
     <div className="sticky top-0 left-0 right-0 z-40">
@@ -27,15 +19,17 @@ export function Header() {
         </Link>
         <nav className="flex gap-4 sm:gap-6">
           <Link className="text-lg font-medium hover:underline underline-offset-4" aria-label="Home" style={{ color: linkColor }} href="/">
-            Home
+            <span className="hidden sm:inline">Home</span>
+            <Home className="sm:hidden" size={24} />
           </Link>
           <Link className="text-lg font-medium hover:underline underline-offset-4" aria-label="Shop" style={{ color: linkColor }} href="/shop">
-            Shop
+            <span className="hidden sm:inline">Shop</span>
+            <ShoppingBag className="sm:hidden" size={24} />
           </Link>
-          <Link className="text-lg font-medium hover:underline underline-offset-4" aria-label="About" style={{ color: linkColor }} href="/about">
+          <Link className="text-lg font-medium hover:underline underline-offset-4 hidden sm:inline-block" aria-label="About" style={{ color: linkColor }} href="/about">
             About
           </Link>
-          <Link className="text-lg font-medium hover:underline underline-offset-4" aria-label="Contact" style={{ color: linkColor }} href="/contact">
+          <Link className="text-lg font-medium hover:underline underline-offset-4 hidden sm:inline-block" aria-label="Contact" style={{ color: linkColor }} href="/contact">
             Contact
           </Link>
         </nav>

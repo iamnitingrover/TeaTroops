@@ -62,13 +62,6 @@ export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl 
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          {/* <Image
-            src={getImageUrl(image)}
-            alt={`Carousel image ${image.id}`}
-            layout="fill"
-            objectFit="cover"
-            priority
-          /> */}
           <Image
             src={getImageUrl(image)}
             alt={`Carousel image ${image.id}`}
@@ -76,7 +69,7 @@ export function BaseCarousel<T extends BaseCarouselImage>({ images, getImageUrl 
             priority
             sizes="100vw"
             style={{ objectFit: 'cover' }}
-            />
+          />
         </Link>
       ))}
       <button

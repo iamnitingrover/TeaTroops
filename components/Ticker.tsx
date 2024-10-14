@@ -22,7 +22,7 @@ export function Ticker() {
     const tickerRef = useRef<HTMLDivElement>(null)
     const [isHovered, setIsHovered] = useState(false)
     const positionRef = useRef(0)
-    const speedFactor = 0.1
+    const speedFactor = 0.07
     const lastTimeRef = useRef(0)
     const pausedPositionRef = useRef(0)
 
