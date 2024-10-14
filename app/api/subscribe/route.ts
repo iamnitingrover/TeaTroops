@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 
       // Load the Google Sheets API credentials
       const auth = new google.auth.GoogleAuth({
-        credentials: JSON.parse(process.env.GOOGLE_SHEETS_CREDENTIALS || ''),
+        credentials: JSON.parse(process.env.NEXT_PUBLIC_GOOGLE_SHEETS_CREDENTIALS || ''),
         scopes: ['https://www.googleapis.com/auth/spreadsheets'],
       })
 
