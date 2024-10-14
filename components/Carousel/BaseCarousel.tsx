@@ -67,7 +67,7 @@ export function BaseCarousel<T extends BaseCarouselImage>({
           src={getImageUrl(currentImage)}
           alt={`Carousel image ${currentImage.id}`}
           fill
-          priority
+          //priority
           sizes="100vw"
           style={{ objectFit: 'cover' }}
         />
