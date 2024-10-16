@@ -26,6 +26,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: 'https://www.teatroops.com/contact',
       lastModified: new Date(),
     },
+    {
+      url: 'https://www.teatroops.com/privacy',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://www.teatroops.com/refund',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://www.teatroops.com/shipping',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://www.teatroops.com/terms',
+      lastModified: new Date(),
+    },
     ...productUrls,
   ]
 }

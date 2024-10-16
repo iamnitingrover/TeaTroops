@@ -60,10 +60,10 @@ const ThumbnailScroller: React.FC<ThumbnailScrollerProps> = ({
     if (direction === 'vertical') {
       return (
         <>
-          <button onClick={() => scroll('up')} className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
+          <button title="Scroll Up" onClick={() => scroll('up')} className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
             <ChevronUp className="w-4 h-4" />
           </button>
-          <button onClick={() => scroll('down')} className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
+          <button title="Scroll Down" onClick={() => scroll('down')} className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
             <ChevronDown className="w-4 h-4" />
           </button>
         </>
@@ -71,10 +71,10 @@ const ThumbnailScroller: React.FC<ThumbnailScrollerProps> = ({
     } else {
       return (
         <>
-          <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
+          <button title="Scroll left" onClick={() => scroll('left')} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
             <ChevronLeft className="w-4 h-4" />
           </button>
-          <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
+          <button title="Scroll right" onClick={() => scroll('right')} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 z-10">
             <ChevronRight className="w-4 h-4" />
           </button>
         </>
@@ -91,6 +91,7 @@ const ThumbnailScroller: React.FC<ThumbnailScrollerProps> = ({
       >
         {images.map((image, index) => (
           <button
+            title="Select Image"
             key={index}
             onClick={() => onSelect(index)}
             className={`flex-shrink-0 ${direction === 'vertical' ? 'w-24 h-24 mb-4 last:mb-0' : 'w-20 h-20 mr-4 last:mr-0'} overflow-hidden rounded-md ${

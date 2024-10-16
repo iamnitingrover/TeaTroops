@@ -73,6 +73,7 @@ export function BaseCarousel<T extends BaseCarouselImage>({
         />
       </Link>
       <button
+        title="Previous image"
         onClick={prevImage}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
         aria-label="Previous image"
@@ -80,6 +81,7 @@ export function BaseCarousel<T extends BaseCarouselImage>({
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
+        title="Next image"
         onClick={nextImage}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
         aria-label="Next image"
@@ -89,6 +91,7 @@ export function BaseCarousel<T extends BaseCarouselImage>({
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
         {images.map((_, index) => (
           <button
+            title="Select carousel image" 
             key={index}
             onClick={() => setCurrentImageIndex(index)}
             className={`w-3 h-3 rounded-full ${

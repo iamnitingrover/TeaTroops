@@ -58,7 +58,11 @@ export default function SubscriptionPopup() {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg relative max-w-md w-full">
-        <button onClick={handleClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+        <button
+          title="Close Popup"
+          onClick={handleClose} 
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        >
           <X size={24} />
         </button>
         <h2 className="text-2xl font-bold mb-4">Get 10% Off Your First Order!</h2>
@@ -71,9 +75,9 @@ export default function SubscriptionPopup() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <Button type="submit" className="w-full">Subscribe</Button>
+          <Button title="Subscribe" type="submit" className="w-full">Subscribe</Button>
         </form>
-        <button onClick={handleNotInterested} className="mt-4 text-sm text-gray-500 hover:underline">
+        <button title="Not Interested" onClick={handleNotInterested} className="mt-4 text-sm text-gray-500 hover:underline">
           No thanks, I&apos;m not interested
         </button>
       </div>

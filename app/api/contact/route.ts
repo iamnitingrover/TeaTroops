@@ -30,6 +30,7 @@ export async function POST(request: Request) {
   const message = formData.get('message')
   const file = formData.get('file') as File | null
   const supportEmail = process.env.NEXT_PUBLIC_SUPPORT_EMAIL;
+  const supportEmail2 = process.env.NEXT_PUBLIC_SUPPORT_EMAIL2;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -45,6 +46,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: supportEmail,
+      cc: supportEmail2,
       subject: `${mailType}: ${subject}`,
       text: message as string,
       html: `<p>${message}</p>`,

@@ -60,6 +60,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
             <div className="flex flex-wrap gap-2 md:gap-4">
               {Object.keys(product.sizes).map((size) => (
                 <button
+                  title="Select Size"
                   key={size}
                   onClick={() => setSelectedSize(size)}
                   className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm ${
@@ -87,6 +88,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                 <p className="text-base md:text-lg font-semibold mb-2">Buy on:</p>
                 <div className="flex flex-row gap-2 md:gap-4">
                   <button
+                    title="Buy Now on Amazon"
                     onClick={handleAmazonClick}
                     className="flex-1 md:flex-none px-4 py-2 md:px-6 md:py-3 bg-[#FFFFFF] text-black rounded-full flex items-center justify-center space-x-2 md:w-auto"
                   >
@@ -94,6 +96,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                     <span className="text-sm md:text-base">Amazon</span>
                   </button>
                   <button
+                    title="Buy Now on WhatsApp"
                     onClick={handleWhatsAppClick}
                     className="flex-1 md:flex-none px-4 py-2 md:px-6 md:py-3 bg-[#25D366] text-white rounded-full flex items-center justify-center space-x-2 md:w-auto"
                   >
