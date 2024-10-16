@@ -31,6 +31,7 @@ export default function AboutUs() {
               width={300}
               height={300}
               className="w-full h-auto"
+              priority
             />
           </div>
 
