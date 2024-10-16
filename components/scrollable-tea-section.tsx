@@ -49,6 +49,7 @@ export function ScrollableTeaSection({ teas }: ScrollableTeaSectionProps) {
       </div>
       {showLeftArrow && (
         <button
+          title="Scroll left"
           onClick={() => scroll('left')}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#00AB6A] bg-opacity-50 text-white p-2 rounded-full"
           aria-label="Scroll left"
@@ -58,6 +59,7 @@ export function ScrollableTeaSection({ teas }: ScrollableTeaSectionProps) {
       )}
       {showRightArrow && (
         <button
+          title="Scroll right"
           onClick={() => scroll('right')}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#00AB6A] bg-opacity-50 text-white p-2 rounded-full"
           aria-label="Scroll right"

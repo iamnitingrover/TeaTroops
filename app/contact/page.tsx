@@ -82,7 +82,7 @@ export default function ContactPage() {
           <Label htmlFor="file">Attachment (optional)</Label>
           <Input type="file" id="file" name="file" multiple />
         </div>
-        <Button type="submit" disabled={isSubmitting} className="w-full">
+        <Button title="Send Message" type="submit" disabled={isSubmitting} className="w-full">
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
       </form>
