@@ -15,12 +15,12 @@ export default function ProductCard({ product }: ProductCardProps) {
     <Card className="cursor-pointer transition-shadow hover:shadow-lg h-full flex flex-col relative">
       <Link href={`/product/${product.slug}`}>
         <CardHeader className="pb-0">
-          <CardTitle className="text-xl sm:text-2xl font-light" style={{color:'#00AB6A'}}>{product.displayName}</CardTitle>
+          <CardTitle className="text-xl sm:text-xl font-light" style={{color:'#00AB6A'}}>{product.displayName}</CardTitle>
           <div className="flex flex-wrap gap-2 sm:gap-4 mb-2 sm:mb-4">
             {product.benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-1 sm:space-x-2">
-                <span className="text-base sm:text-lg">{benefit.icon}</span>
-                <span className="text-xs sm:text-sm font-light">{benefit.name}</span>
+                <span className="text-base sm:text-xs">{benefit.icon}</span>
+                <span className="text-xs sm:text-xs font-light">{benefit.name}</span>
               </div>
             ))}
           </div>
