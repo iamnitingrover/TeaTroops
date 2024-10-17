@@ -1,3 +1,5 @@
+// "ShopContent" component is responsible for rendering the products in the shop page.
+
 "use client"
 
 import { useState } from 'react'

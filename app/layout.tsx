@@ -1,3 +1,5 @@
+// Code for the layout component that wraps all pages in the app. This component includes the Header and Footer components, and the Vercel Analytics component. The layout component also includes the global CSS file and the Google Analytics script.
+
 import type { Metadata } from 'next'
 import './globals.css'
 import { Header } from '@/components/Header'

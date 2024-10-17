@@ -1,4 +1,24 @@
+# Allow all user agents to access the entire site
 User-agent: *
 Allow: /
 
+# Disallow access to sensitive directories
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+
+# Disallow access to specific file types
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.zip$
+
+# Allow access to specific directories
+Allow: /public/
+Allow: /static/
+
+# Crawl-delay directive to prevent server overload (optional)
+Crawl-delay: 10
+
+# Sitemap location
 Sitemap: https://www.teatroops.com/sitemap.xml
