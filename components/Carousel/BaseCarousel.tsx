@@ -1,3 +1,5 @@
+//Carousel component that displays a list of images in a carousel with a timer to automatically change images.  
+
 import { useState, useEffect, useRef } from 'react'
 import Link from "next/link"
 import Image from "next/image"

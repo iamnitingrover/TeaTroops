@@ -1,4 +1,4 @@
-// components/Carousel/CarouselFactory.tsx
+// Code for rendering the appropriate carousel based on the device orientation. 
 
 "use client"
 
