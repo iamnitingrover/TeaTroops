@@ -36,8 +36,8 @@ yarn-error.log*
 
 #next-env.d.ts
 
+#Junk files
 notes.txt
-oldproductpagelayout.tsx
 .vscode/settings.json
 components/carousel.tsx
 components/ProductFilters.tsx

@@ -1,3 +1,4 @@
+// Purpose: Display a horizontal scrollable section of tea products on the homepage.
 "use client"
 
 import { useRef, useState, useEffect } from 'react'

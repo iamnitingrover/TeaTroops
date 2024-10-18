@@ -1,3 +1,5 @@
+// This component is a popup that prompts users to subscribe to a mailing list on the homepage. It includes an input field for the user's email address and a submit button.
+
 "use client"
 
 import { useState, useEffect } from 'react'

@@ -7,8 +7,8 @@ const config = {
   
   // Content paths for Tailwind to process
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
+    './pages/**/*.{js,ts,ts,tsx}',
+    './components/**/*.{js,ts,ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
@@ -93,7 +93,13 @@ const config = {
   },
   
   // Plugins
-  plugins: [tailwindcssAnimate],
+  plugins: [
+    { 
+      tailwindcssAnimate,
+      tailWindcss: {},
+      autoprefixer: {},
+    }
+  ],
 }
 
 export default config;

@@ -1,3 +1,5 @@
+// ProductImageGallery component that displays a main image and a thumbnail scroller
+
 "use client"
 
 import React, { useRef, useState, useEffect } from 'react';

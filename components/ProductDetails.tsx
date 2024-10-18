@@ -1,3 +1,5 @@
+// Note: Product Details Component. This component displays the details of a product, including the product name, description, benefits, price, and purchase options. The component is responsive and uses Tailwind CSS for styling.
+
 "use client"
 
 import { useState } from 'react'

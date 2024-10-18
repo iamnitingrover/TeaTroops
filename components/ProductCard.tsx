@@ -1,3 +1,5 @@
+// Code: ProductCard component. This component is responsible for rendering a product card on the homepage and shop page. It displays the product image, name, price, and benefits. The component is responsive and uses Tailwind CSS for styling.
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"

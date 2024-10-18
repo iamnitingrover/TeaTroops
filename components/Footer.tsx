@@ -1,3 +1,5 @@
+// Note: Footer component for the website. It includes a brief description of the Tea Troops brand, a list of quick links, and social media icons. The component is responsive and uses Tailwind CSS for styling.
+
 "use client"
 
 import Link from 'next/link'

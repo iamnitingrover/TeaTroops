@@ -1,8 +1,8 @@
+// Ticker component: This component displays a ticker at the top of the page with messages that scroll horizontally. The messages are defined in the `messages` array. The ticker scrolls automatically, but pauses when hovered over. The speed of the scroll can be adjusted by changing the `speedFactor` variable.
+
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-// import { getProduct } from '@/lib/products'
-// import { usePathname } from 'next/navigation'
 
 const messages = [
   "🎉 Enjoy 10% off your Monthly Subscription!",
@@ -11,13 +11,7 @@ const messages = [
 ]
 
 export function Ticker() {
-    // const pathname = usePathname()
-    // const isProductPage = pathname.startsWith('/product/')
-    // const productSlug = isProductPage ? pathname.split('/').pop() : null
-    // const product = productSlug ? getProduct(productSlug) : null
-    //const headerColor = product ? product.colorScheme : 'black'
     const headerColor = 'black'
-    //const linkColor = product ? product.linkColorScheme : '#ffffff'
     const linkColor = '#ffffff'
     const tickerRef = useRef<HTMLDivElement>(null)
     const [isHovered, setIsHovered] = useState(false)

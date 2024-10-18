@@ -1,5 +1,3 @@
-// components/Carousel/Carousel.tsx
-
 import { CarouselFactory } from './CarouselFactory'
 import { LandscapeCarouselImage, PortraitCarouselImage } from '@/types/carousel'
 

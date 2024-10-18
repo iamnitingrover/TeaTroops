@@ -1,3 +1,5 @@
+// Note: Header component for the website. It includes a logo, navigation links, and a ticker displaying the latest offers. The component is responsive and uses Tailwind CSS for styling.
+
 'use client'
 
 import Link from 'next/link'
