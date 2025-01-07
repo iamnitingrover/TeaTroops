@@ -47,6 +47,7 @@ export default function RootLayout({
             gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
           `}
         </Script>
+        <title>Tea Troops</title>
       </head>
       <body>
         <div className="font-sans flex flex-col min-h-screen ">
