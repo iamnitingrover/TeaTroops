@@ -17,26 +17,32 @@ export default function RefundPage() {
         </ul>
       </section>
 
-      <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">Replacements</h2>
-        <p className="font-light mb-2">
-          A request for replacement must be initiated within a maximum of 5 days from the day of delivery.
-        </p>
-        <p className="font-light mb-2">
-          Please attach a picture of the delivered order along with the invoice and send a mail to <a href="mailto:help@teatroops.com" className="underline text-blue-600">help@teatroops.com</a>. 
-          Our Audit team will review and send you a replacement, if applicable, in the following conditions:
-        </p>
-        <ul className="font-light list-disc pl-5 space-y-2">
-          <li>Damaged/Incorrect Product Received</li>
-          <li>Item missing from order</li>
-          <li>Expired Product Received (Please attach a picture of the product showing the expiry date along with the invoice)</li>
-        </ul>
-      </section>
+        <section className="font-light mb-6">
+            <h2 className="text-2xl font-light mb-3">Replacements</h2>
+            <p className="font-light mb-2">
+                A request for replacement must be initiated within a maximum of 5 days from the day of delivery.
+            </p>
+            <p className="font-light mb-2">
+                Product replacements typically take 5-7 business days to be delivered to you. We strive to ensure a smooth and timely process.
+            </p>
+            <p className="font-light mb-2">
+                Please attach a picture of the delivered order along with the invoice and send a mail to <a
+                href="mailto:help@teatroops.com" className="underline text-blue-600">help@teatroops.com</a>.
+                Our Audit team will review and send you a replacement, if applicable, in the following conditions:
+            </p>
+            <ul className="font-light list-disc pl-5 space-y-2">
+                <li>Damaged/Incorrect Product Received</li>
+                <li>Item missing from order</li>
+                <li>Expired Product Received (Please attach a picture of the product showing the expiry date along with
+                    the invoice)
+                </li>
+            </ul>
+        </section>
 
-      <section className="font-light mb-6">
-        <h2 className="text-2xl font-light mb-3">Returns</h2>
-        <p>
-          Due to the perishable nature of Tea we do not accept returns on any products, instead we can replace the same if applicable.
+        <section className="font-light mb-6">
+            <h2 className="text-2xl font-light mb-3">Returns</h2>
+            <p>
+                Due to the perishable nature of Tea we do not accept returns on any products, instead we can replace the same if applicable.
         </p>
       </section>
     </div>
