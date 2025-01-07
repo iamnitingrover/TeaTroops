@@ -12,7 +12,7 @@ export default function RefundPage() {
         <h2 className="text-2xl font-light mb-3">Cancellations</h2>
         <ul className="font-light list-disc pl-5 space-y-2">
           <li>All cancellation requests must be initiated before the order is dispatched for shipping.</li>
-          <li>Refunds initiates in 3-5 business days from cancellation.</li>
+          <li>All payemnts will be credited within 5-7 business days from cancellation.</li>
           <li>In case your order has already been shipped, it cannot be cancelled as our service partners charge us as soon as the pickup is completed.</li>
         </ul>
       </section>
