@@ -6,6 +6,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { VercelAnalytics } from './analytics'
 import Script from 'next/script'
+import React from "react";
 
 export const metadata: Metadata = {
   title: {
